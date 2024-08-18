@@ -13,7 +13,7 @@ var state: String = "idle"
 
 func _ready() -> void:
 	animated_sprite.play(&"idle_down")
-	
+	# Cursor animation
 	var tween: Tween = create_tween()
 	tween.set_loops()
 	tween.tween_property(cursor, ^"position:y", 1.5, 0.4).as_relative()
@@ -53,7 +53,7 @@ func update_animation() -> void:
 	animation = state + sprite_direction
 
 func define_sync_state() -> void:
-	# Should convert to bytes for optimization ?
+	# Should convert to packedbytes for optimization ?
 	sync_state = {
 		"T": Time.get_unix_time_from_system(),
 		"position": get_global_position(),

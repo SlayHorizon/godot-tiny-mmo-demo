@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://hcfiu2vpqr3u"]
 
-[ext_resource type="Script" path="res://client/entities/map_objects/doors/activable_door/activable_door.gd" id="1_ppv3d"]
+[ext_resource type="Script" path="res://client/map_objects/doors/activable_door/activable_door.gd" id="1_ppv3d"]
 [ext_resource type="Texture2D" uid="uid://b50yc4g3x82e1" path="res://assets/graphical/tilesets/water_dungeon/Set 3.5.png" id="2_cbwwo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_se44f"]

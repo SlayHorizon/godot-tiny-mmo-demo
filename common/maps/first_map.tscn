@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bes7wghqaghle" path="res://assets/graphical/tilesets/water_dungeon/blue_dg_tileset.png" id="1_i8p5v"]
 [ext_resource type="Texture2D" uid="uid://dm0ou147lehy8" path="res://assets/graphical/tilesets/water_dungeon/Set 1.2.png" id="2_4g4cg"]
-[ext_resource type="PackedScene" uid="uid://digkg4swbl27x" path="res://client/entities/map_objects/collectibles/coin.tscn" id="3_ef1ij"]
-[ext_resource type="PackedScene" uid="uid://hcfiu2vpqr3u" path="res://client/entities/map_objects/doors/activable_door/activable_door.tscn" id="4_0lkki"]
-[ext_resource type="PackedScene" uid="uid://bojii5hxh2lgh" path="res://client/entities/map_objects/ground_button/ground_button.tscn" id="5_mlcfb"]
+[ext_resource type="PackedScene" uid="uid://digkg4swbl27x" path="res://client/map_objects/collectibles/coin.tscn" id="3_ef1ij"]
+[ext_resource type="PackedScene" uid="uid://hcfiu2vpqr3u" path="res://client/map_objects/doors/activable_door/activable_door.tscn" id="4_0lkki"]
+[ext_resource type="PackedScene" uid="uid://bojii5hxh2lgh" path="res://client/map_objects/ground_button/ground_button.tscn" id="5_mlcfb"]
 [ext_resource type="PackedScene" uid="uid://b2ckixon7ryh6" path="res://common/maps/map_components/warper.tscn" id="6_dfiuk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_thq1n"]

@@ -5,9 +5,8 @@ extends Node
 func _ready() -> void:
 	if OS.has_feature("client"):
 		await get_tree().create_timer(1.0).timeout
-		DisplayServer.window_set_title("Client")
 		add_child(
-			load("res://client/instances/instance_client.tscn").instantiate()
+			load("res://client/instance_client/instance_client.tscn").instantiate()
 		)
 		Client.connect_to_server()
 	elif OS.has_feature("server"):
@@ -21,7 +20,7 @@ func setup_server() -> void:
 		instance_resources.append(ResourceLoader.load(file_path))
 	Server.instance_collection.append_array(instance_resources)
 	for instance_resource in instance_resources:
-		var new_instance: ServerInstance = preload("res://server/instances/instance_server.tscn").instantiate()
+		var new_instance: ServerInstance = preload("res://server/instance_server/instance_server.tscn").instantiate()
 		new_instance.name = instance_resource.instance_name
 		new_instance.instance_resource = instance_resource
 		add_child(new_instance)
@@ -44,7 +43,7 @@ func get_all_file_paths(path: String) -> Array[String]:
 
 @rpc("authority", "call_remote", "reliable", 0)
 func request_change_instance(new_instance: Dictionary) -> void:
-	var instance = get_child(0)
+	var instance = get_child(0) # Bad
 	instance.queue_free()
 	instance = InstanceClient.new()
 	add_child(instance)

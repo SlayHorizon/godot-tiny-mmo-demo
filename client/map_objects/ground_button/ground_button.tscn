@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bojii5hxh2lgh"]
 
-[ext_resource type="Script" path="res://client/entities/map_objects/ground_button/ground_button.gd" id="1_tgw3s"]
+[ext_resource type="Script" path="res://client/map_objects/ground_button/ground_button.gd" id="1_tgw3s"]
 [ext_resource type="Texture2D" uid="uid://drqxetxdiqg42" path="res://assets/graphical/tilesets/water_dungeon/Button.png" id="2_gjrth"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v421g"]

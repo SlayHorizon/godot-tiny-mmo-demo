@@ -8,7 +8,7 @@ var entity_collection: Dictionary = {}
 
 var last_state: Dictionary = {"T" = 0.0}
 
-const LOCAL_PLAYER = preload("res://client/entities/local_player/local_player.tscn")
+const LOCAL_PLAYER = preload("res://client/local_player/local_player.tscn")
 const DUMMY_PLAYER = preload("res://common/entities/player/base_player/player.tscn")
 
 @rpc("authority", "call_remote", "unreliable", 0)
@@ -46,15 +46,6 @@ func update_entity_collection(collection_state: Dictionary) -> void:
 	for entity_id: int in entity_collection:
 		if collection_state.has(entity_id):
 			(entity_collection[entity_id] as Entity).sync_state = collection_state[entity_id]
-
-#@rpc("authority", "call_remote", "reliable", 0)
-#func request_change_instance(new_instance: Dictionary) -> void:
-	#for child in get_children():
-		#child.queue_free()
-	#name = new_instance["instance_name"]
-	#var map: Node2D = load(new_instance["map_path"]).instantiate()
-	#map.ready.connect(ready_to_enter_instance)
-	#add_child(map)
 
 @rpc("any_peer", "call_remote", "reliable", 0)
 func ready_to_enter_instance() -> void:

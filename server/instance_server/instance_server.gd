@@ -10,13 +10,6 @@ var instance_resource: InstanceResource
 
 func _ready() -> void:
 	pass
-	# Not the good way, the player should auth and stuff before spawning.
-	# Used for fast prototyping
-	#multiplayer.peer_connected.connect(self.spawn_player)
-	#multiplayer.peer_disconnected.connect(self.despawn_player)
-	#for child in get_child(0).get_children():
-		#if child is Warper:
-			#child.player_trying_to_exit.connect(self.change_instance)
 
 func _physics_process(_delta: float) -> void:
 	var state: Dictionary = {"EC" = {}}
@@ -25,7 +18,6 @@ func _physics_process(_delta: float) -> void:
 	state["T"] = Time.get_unix_time_from_system()
 	for peer_id: int in connected_peers:
 		fetch_instance_state.rpc_id(peer_id, state)
-
 
 func load_map(map_scene: PackedScene) -> void:
 	if not map_scene: return;
@@ -42,7 +34,6 @@ func fetch_instance_state(_new_state: Dictionary):
 @rpc("any_peer", "call_remote", "unreliable", 0)
 func fetch_player_state(sync_state: Dictionary) -> void:
 	var peer_id: int = multiplayer.get_remote_sender_id()
-	
 	if entity_collection.has(peer_id):
 		var entity: Entity = entity_collection[peer_id] as Entity
 		if entity.sync_state["T"] < sync_state["T"]:
@@ -56,7 +47,6 @@ func spawn_player(player_id: int, spawn_state: Dictionary = {}) -> void:
 		spawn_position = get_child(0).get_node("SpawnPoint").global_position
 	spawn_state = {"position": spawn_position}
 	new_player.name = str(player_id)
-	#new_player.position = Vector2(300, 150)
 	new_player.spawn_state = spawn_state
 	add_child(new_player, true)
 	entity_collection[player_id] = new_player
@@ -84,21 +74,18 @@ func enter_instance(peer_id: int) -> void:
 		}
 	get_parent().request_change_instance.rpc_id(peer_id, instance_data)
 
-#func change_instance(player: Player, instance_target: InstanceResource) -> void:
 func change_instance(player: Player, instance_name: StringName) -> void:
 	var player_id: int = player.name.to_int()
 	if connected_peers.has(player_id):
 		despawn_player(player_id)
 	var target_instance: InstanceResource = Server.get_instance_resource_from_name(instance_name)
 	if not target_instance: return;
-	get_parent().request_change_instance.rpc_id(player_id, {
-	"instance_name": target_instance.instance_name,
-	"map_path": target_instance.map.resource_path
-	})
-	#get_parent().request_change_instance.rpc_id(player_id, {
-		#"instance_name": "AnotherInstance",
-		#"map_path": "res://common/maps/second_map.tscn"
-		#})
+	get_parent().request_change_instance.rpc_id(player_id, 
+		{
+		"instance_name": target_instance.instance_name,
+		"map_path": target_instance.map.resource_path
+		}
+	)
 
 @rpc("any_peer", "call_remote", "reliable", 0)
 func ready_to_enter_instance() -> void:
