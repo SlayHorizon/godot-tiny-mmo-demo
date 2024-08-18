@@ -1,0 +1,2 @@
+class_name PlayerResource
+extends Resource

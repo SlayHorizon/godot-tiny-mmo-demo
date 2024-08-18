@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://bojii5hxh2lgh"]
+
+[ext_resource type="Script" path="res://client/entities/map_objects/ground_button/ground_button.gd" id="1_tgw3s"]
+[ext_resource type="Texture2D" uid="uid://drqxetxdiqg42" path="res://assets/graphical/tilesets/water_dungeon/Button.png" id="2_gjrth"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v421g"]
+atlas = ExtResource("2_gjrth")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ko8j8"]
+atlas = ExtResource("2_gjrth")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11byr"]
+atlas = ExtResource("2_gjrth")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k88gv"]
+atlas = ExtResource("2_gjrth")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aa61n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v421g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ko8j8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11byr")
+}],
+"loop": false,
+"name": &"pressed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k88gv")
+}],
+"loop": false,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uru4r"]
+size = Vector2(16, 16)
+
+[node name="GroundButton" type="Area2D"]
+script = ExtResource("1_tgw3s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_aa61n")
+animation = &"up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_uru4r")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
