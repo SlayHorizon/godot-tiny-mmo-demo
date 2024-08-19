@@ -12,9 +12,12 @@ The Tiny MMO Template provides basics for creating an MMO-style game, including 
 
 ## Getting Started
 
-To get started with the Tiny MMO Template:
+To get started with the project:
 
 1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/SlayHorizon/godot-tiny-mmo-template.git
-   cd godot-tiny-mmo-template
+- Clone this repository.
+- Start it with Godot 4.3.
+- In Debug tab, choose "Customizable Run Instance...".
+- Enable Multiple Instances and set 3.
+- Under feature tags, be sure to have 2 "client" and 1 "server.
+- Close and play the project.
