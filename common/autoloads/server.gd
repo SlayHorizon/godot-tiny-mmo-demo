@@ -29,7 +29,7 @@ func get_instance_resource_from_name(instance_name) -> InstanceResource:
 	return null
 
 ## Example of how to create a crypto key with its self signed certificate.
-## The private shouldn't be exported on the client machine.
+## The private key shouldn't be exported on the client machine.
 static func generate_key_n_cert() -> void:
 	var crypto = Crypto.new()
 	var key = CryptoKey.new()

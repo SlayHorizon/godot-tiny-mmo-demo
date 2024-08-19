@@ -12,6 +12,7 @@ func _ready() -> void:
 	elif OS.has_feature("server"):
 		setup_server()
 
+
 func setup_server() -> void:
 	DisplayServer.window_set_title("Server")
 	get_window().position = Vector2(0, 0)
@@ -29,9 +30,9 @@ func setup_server() -> void:
 
 func get_all_file_paths(path: String) -> Array[String]:  
 	var file_paths: Array[String] = []  
-	var dir = DirAccess.open(path)  
+	var dir := DirAccess.open(path)  
 	dir.list_dir_begin()  
-	var file_name = dir.get_next()  
+	var file_name: String = dir.get_next()  
 	while file_name != "":  
 		var file_path = path + "/" + file_name  
 		if dir.current_is_dir():  

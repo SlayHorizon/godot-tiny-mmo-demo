@@ -3,13 +3,12 @@ extends Node2D
 
 ## Base class for instances. Instances are used as a base of a multiplayer scene,
 ## which can contain a map, entities (NPCs, players, mobs, objects).
+const LOCAL_PLAYER = preload("res://client/local_player/local_player.tscn")
+const DUMMY_PLAYER = preload("res://common/entities/player/base_player/player.tscn")
 
 var entity_collection: Dictionary = {}
 
 var last_state: Dictionary = {"T" = 0.0}
-
-const LOCAL_PLAYER = preload("res://client/local_player/local_player.tscn")
-const DUMMY_PLAYER = preload("res://common/entities/player/base_player/player.tscn")
 
 @rpc("authority", "call_remote", "unreliable", 0)
 func fetch_instance_state(new_state: Dictionary):

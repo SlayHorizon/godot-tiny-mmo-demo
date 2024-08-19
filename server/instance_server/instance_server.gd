@@ -9,7 +9,11 @@ var connected_peers: PackedInt64Array = []
 var instance_resource: InstanceResource
 
 func _ready() -> void:
-	pass
+	multiplayer.peer_disconnected.connect(
+		func(peer_id: int):
+			if connected_peers.has(peer_id):
+				despawn_player(peer_id)
+	)
 
 func _physics_process(_delta: float) -> void:
 	var state: Dictionary = {"EC" = {}}

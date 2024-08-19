@@ -26,12 +26,13 @@ func close_connection():
 	multiplayer.server_disconnected.disconnect(self._on_server_disconnected)
 	multiplayer.set_multiplayer_peer(null)
 	peer.close()
+	connection_status = false
 
 func _on_connection_succeeded() -> void:
 	print("Succesfuly connected to the server as %d!" % multiplayer.get_unique_id())
-	connection_status = true
 	peer_id = multiplayer.get_unique_id()
 	DisplayServer.window_set_title("Client - %d" % peer_id)
+	connection_status = true
 
 func _on_connection_failed() -> void:
 	print("Failed to connect to the server.")
@@ -40,5 +41,4 @@ func _on_connection_failed() -> void:
 func _on_server_disconnected() -> void:
 	print("Server disconnected.")
 	close_connection()
-	# Avoid hundred of errors when server disconnected.
 	get_tree().paused = true
