@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clxigyedrpunv"
-path="res://.godot/imported/Green Knight idle Sprite-sheet 16x16.png-405830779c8c4c6808f8129ce540f6ea.ctex"
+uid="uid://bl4x3jlsvt3jq"
+path="res://.godot/imported/bone.png-eec0d429d95b6a60278d8e4b14a33181.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/knights/Green Knight idle Sprite-sheet 16x16.png"
-dest_files=["res://.godot/imported/Green Knight idle Sprite-sheet 16x16.png-405830779c8c4c6808f8129ce540f6ea.ctex"]
+source_file="res://assets/graphical/items/weapons/bone/bone.png"
+dest_files=["res://.godot/imported/bone.png-eec0d429d95b6a60278d8e4b14a33181.ctex"]
 
 [params]
 

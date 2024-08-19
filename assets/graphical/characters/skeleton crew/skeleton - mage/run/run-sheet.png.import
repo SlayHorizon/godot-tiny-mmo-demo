@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1gubu7iqob2q"
-path="res://.godot/imported/Green Knight run Sprite-sheet 16x17.png-31628080a7aa126854bda5382029c8d1.ctex"
+uid="uid://ck2tlcmcqoyb3"
+path="res://.godot/imported/run-sheet.png-fda8866ed799f353f0a4af90f2306fdc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/knights/Green Knight run Sprite-sheet 16x17.png"
-dest_files=["res://.godot/imported/Green Knight run Sprite-sheet 16x17.png-31628080a7aa126854bda5382029c8d1.ctex"]
+source_file="res://assets/graphical/characters/skeleton crew/skeleton - mage/run/run-sheet.png"
+dest_files=["res://.godot/imported/run-sheet.png-fda8866ed799f353f0a4af90f2306fdc.ctex"]
 
 [params]
 

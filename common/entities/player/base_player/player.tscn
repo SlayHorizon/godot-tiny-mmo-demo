@@ -1,8 +1,8 @@
 [gd_scene load_steps=70 format=3 uid="uid://6bcg7fwcl6mi"]
 
 [ext_resource type="Script" path="res://common/entities/player/base_player/player.gd" id="1_gnfj5"]
-[ext_resource type="Texture2D" uid="uid://clxigyedrpunv" path="res://assets/graphical/characters/knights/Green Knight idle Sprite-sheet 16x16.png" id="2_dhlwb"]
-[ext_resource type="Texture2D" uid="uid://c1gubu7iqob2q" path="res://assets/graphical/characters/knights/Green Knight run Sprite-sheet 16x17.png" id="3_qqs0l"]
+[ext_resource type="Texture2D" uid="uid://clxigyedrpunv" path="res://assets/graphical/characters/old_knight/Green Knight idle Sprite-sheet 16x16.png" id="2_dhlwb"]
+[ext_resource type="Texture2D" uid="uid://c1gubu7iqob2q" path="res://assets/graphical/characters/old_knight/Green Knight run Sprite-sheet 16x17.png" id="3_qqs0l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y64c4"]
 atlas = ExtResource("2_dhlwb")

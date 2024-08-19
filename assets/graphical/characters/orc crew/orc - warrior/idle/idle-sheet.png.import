@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqtshftj3uh6u"
-path="res://.godot/imported/Green Knight set Sprite-sheet.png-53434414e158c9294a87266cc998516c.ctex"
+uid="uid://coytyyal4xnww"
+path="res://.godot/imported/idle-sheet.png-e3c12461208fd50608194068e11669cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/knights/Green Knight set Sprite-sheet.png"
-dest_files=["res://.godot/imported/Green Knight set Sprite-sheet.png-53434414e158c9294a87266cc998516c.ctex"]
+source_file="res://assets/graphical/characters/orc crew/orc - warrior/idle/idle-sheet.png"
+dest_files=["res://.godot/imported/idle-sheet.png-e3c12461208fd50608194068e11669cb.ctex"]
 
 [params]
 
