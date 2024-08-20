@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d17c24gp7sjdb"
-path="res://.godot/imported/OrcShaman_Death.png-252a378a0189ff056569f7cdd400c09b.ctex"
+uid="uid://pj6rlmby8jub"
+path="res://.godot/imported/skeleton_warrior_death.png-b8184cf9e4ace0499438d71faf53ac7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/Orc Shaman/OrcShaman_Death.png"
-dest_files=["res://.godot/imported/OrcShaman_Death.png-252a378a0189ff056569f7cdd400c09b.ctex"]
+source_file="res://assets/graphical/characters/skeleton warrior/skeleton_warrior_death.png"
+dest_files=["res://.godot/imported/skeleton_warrior_death.png-b8184cf9e4ace0499438d71faf53ac7e.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxjhh1ocaiatv"
-path="res://.godot/imported/Brown_Leather_Gloves.png-445adc04ae10db45c152fe62128cf8f1.ctex"
+path="res://.godot/imported/brown_leather_gloves.png-fc9f86d00fdb0cf5b96dff199ea94dc7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/items/weapons/hands/Brown_Leather_Gloves.png"
-dest_files=["res://.godot/imported/Brown_Leather_Gloves.png-445adc04ae10db45c152fe62128cf8f1.ctex"]
+source_file="res://assets/graphical/items/weapons/hands/brown_leather_gloves.png"
+dest_files=["res://.godot/imported/brown_leather_gloves.png-fc9f86d00fdb0cf5b96dff199ea94dc7.ctex"]
 
 [params]
 

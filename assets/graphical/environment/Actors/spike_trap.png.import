@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://da32oaudh5aew"
-path="res://.godot/imported/spike_trap.png-bbf448f2ae567c29973c1a020fdbb782.ctex"
+path="res://.godot/imported/spike_trap.png-9ae8bc529de1a14f2cdf3cbe233d4709.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/environment/Actors/spike_trap.png"
-dest_files=["res://.godot/imported/spike_trap.png-bbf448f2ae567c29973c1a020fdbb782.ctex"]
+source_file="res://assets/graphical/environment/actors/spike_trap.png"
+dest_files=["res://.godot/imported/spike_trap.png-9ae8bc529de1a14f2cdf3cbe233d4709.ctex"]
 
 [params]
 

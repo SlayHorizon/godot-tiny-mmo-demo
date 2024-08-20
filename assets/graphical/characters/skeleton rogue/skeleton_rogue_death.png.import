@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvfilnuda5jtb"
-path="res://.godot/imported/SkeletonRogue_Run.png-d76466be574d4a372ef3d748cbcbae4e.ctex"
+uid="uid://dcja4hcsyagj4"
+path="res://.godot/imported/skeleton_rogue_death.png-0471ce4525562c6bc631cf8cab37454d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/Skeleton Rogue/SkeletonRogue_Run.png"
-dest_files=["res://.godot/imported/SkeletonRogue_Run.png-d76466be574d4a372ef3d748cbcbae4e.ctex"]
+source_file="res://assets/graphical/characters/skeleton rogue/skeleton_rogue_death.png"
+dest_files=["res://.godot/imported/skeleton_rogue_death.png-0471ce4525562c6bc631cf8cab37454d.ctex"]
 
 [params]
 

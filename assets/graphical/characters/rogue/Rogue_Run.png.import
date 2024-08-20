@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdh02e0wcmu07"
-path="res://.godot/imported/Rogue_Run.png-492156058ca23810a583c87739d44e02.ctex"
+path="res://.godot/imported/rogue_run.png-c2c5e78a2f33547f82789ae59556559c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/rogue/Rogue_Run.png"
-dest_files=["res://.godot/imported/Rogue_Run.png-492156058ca23810a583c87739d44e02.ctex"]
+source_file="res://assets/graphical/characters/rogue/rogue_run.png"
+dest_files=["res://.godot/imported/rogue_run.png-c2c5e78a2f33547f82789ae59556559c.ctex"]
 
 [params]
 

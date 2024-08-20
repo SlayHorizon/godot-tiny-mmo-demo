@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pj6rlmby8jub"
-path="res://.godot/imported/SkeletonWarrior_Death.png-3cb25b7bb92fd8ce8be1d7defbb28038.ctex"
+uid="uid://dhwryibqkjj23"
+path="res://.godot/imported/skeleton_warrior_run.png-24366459bad14ad8f26f966049e24bf5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/Skeleton Warrior/SkeletonWarrior_Death.png"
-dest_files=["res://.godot/imported/SkeletonWarrior_Death.png-3cb25b7bb92fd8ce8be1d7defbb28038.ctex"]
+source_file="res://assets/graphical/characters/skeleton warrior/skeleton_warrior_run.png"
+dest_files=["res://.godot/imported/skeleton_warrior_run.png-24366459bad14ad8f26f966049e24bf5.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bckcquvnc410c"
-path="res://.godot/imported/OrcRogue_Death.png-a1056aec8352a3f1310f59f38f67a894.ctex"
+uid="uid://cfhsn838f4sfk"
+path="res://.godot/imported/skeleton_warrior_idle.png-4ef3f99e555f5394a48b8923f178f756.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/Orc Rogue/OrcRogue_Death.png"
-dest_files=["res://.godot/imported/OrcRogue_Death.png-a1056aec8352a3f1310f59f38f67a894.ctex"]
+source_file="res://assets/graphical/characters/skeleton warrior/skeleton_warrior_idle.png"
+dest_files=["res://.godot/imported/skeleton_warrior_idle.png-4ef3f99e555f5394a48b8923f178f756.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://3gwghegqlusw"
-path="res://.godot/imported/Knight_Death.png-680eec88be8a3e9e4719a9058df9d20d.ctex"
+path="res://.godot/imported/knight_death.png-feebec420ac8fbe44ff645acdf4d7967.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/knight/Knight_Death.png"
-dest_files=["res://.godot/imported/Knight_Death.png-680eec88be8a3e9e4719a9058df9d20d.ctex"]
+source_file="res://assets/graphical/characters/knight/knight_death.png"
+dest_files=["res://.godot/imported/knight_death.png-feebec420ac8fbe44ff645acdf4d7967.ctex"]
 
 [params]
 

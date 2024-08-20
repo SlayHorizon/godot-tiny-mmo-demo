@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://citqnckja8g7b"
-path="res://.godot/imported/SkeletonMage_Idle.png-bded51127a22c8b7f48f0315fd71c871.ctex"
+uid="uid://cxsn13qdn7ypv"
+path="res://.godot/imported/skeleton_mage_death.png-807e5b31f79435d1d44d6c2062977399.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/Skeleton Mage/SkeletonMage_Idle.png"
-dest_files=["res://.godot/imported/SkeletonMage_Idle.png-bded51127a22c8b7f48f0315fd71c871.ctex"]
+source_file="res://assets/graphical/characters/skeleton mage/skeleton_mage_death.png"
+dest_files=["res://.godot/imported/skeleton_mage_death.png-807e5b31f79435d1d44d6c2062977399.ctex"]
 
 [params]
 

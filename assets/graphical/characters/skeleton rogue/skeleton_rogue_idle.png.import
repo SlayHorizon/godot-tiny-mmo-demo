@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6lepy0fgwxv8"
-path="res://.godot/imported/OrcShaman_Idle.png-082ba1c7310b89112c7f035726fa70b1.ctex"
+uid="uid://46kme8shkhq7"
+path="res://.godot/imported/skeleton_rogue_idle.png-10bdac49bb74b03267e231f9dec07a36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/Orc Shaman/OrcShaman_Idle.png"
-dest_files=["res://.godot/imported/OrcShaman_Idle.png-082ba1c7310b89112c7f035726fa70b1.ctex"]
+source_file="res://assets/graphical/characters/skeleton rogue/skeleton_rogue_idle.png"
+dest_files=["res://.godot/imported/skeleton_rogue_idle.png-10bdac49bb74b03267e231f9dec07a36.ctex"]
 
 [params]
 

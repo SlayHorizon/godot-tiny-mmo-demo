@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ursv04hd5idb"
-path="res://.godot/imported/dungeon_barrel.png-bedfc540cfa3f7b95f187ede734279e7.ctex"
+path="res://.godot/imported/dungeon_barrel.png-f29c6ae7be84a7f602ed03f8d4977019.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/environment/Actors/dungeon_barrel.png"
-dest_files=["res://.godot/imported/dungeon_barrel.png-bedfc540cfa3f7b95f187ede734279e7.ctex"]
+source_file="res://assets/graphical/environment/actors/dungeon_barrel.png"
+dest_files=["res://.godot/imported/dungeon_barrel.png-f29c6ae7be84a7f602ed03f8d4977019.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y5lsk6avyv2k"
-path="res://.godot/imported/OrcShaman_Run.png-caa5ff2bd444f912ad99a531cbe9b31c.ctex"
+uid="uid://dr42dc3gxicw0"
+path="res://.godot/imported/orc_rogue_run.png-237c852e277f4405a5ff0cd71622a8db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/Orc Shaman/OrcShaman_Run.png"
-dest_files=["res://.godot/imported/OrcShaman_Run.png-caa5ff2bd444f912ad99a531cbe9b31c.ctex"]
+source_file="res://assets/graphical/characters/orc rogue/orc_rogue_run.png"
+dest_files=["res://.godot/imported/orc_rogue_run.png-237c852e277f4405a5ff0cd71622a8db.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rhghg70ffd4q"
-path="res://.godot/imported/bars_gate.png-1b5dc0d11c44ad535ff11e5324897584.ctex"
+path="res://.godot/imported/bars_gate.png-334b68e21c69addf6238cf1b6a9d0be8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/environment/Actors/bars_gate.png"
-dest_files=["res://.godot/imported/bars_gate.png-1b5dc0d11c44ad535ff11e5324897584.ctex"]
+source_file="res://assets/graphical/environment/actors/bars_gate.png"
+dest_files=["res://.godot/imported/bars_gate.png-334b68e21c69addf6238cf1b6a9d0be8.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://br3423lpwmj2v"
-path="res://.godot/imported/Rogue_Idle.png-b95a639885b99989da13d12d9fdc1eaf.ctex"
+path="res://.godot/imported/rogue_idle.png-209b4f308cfd8b32bfcfbb9e33475ac9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/rogue/Rogue_Idle.png"
-dest_files=["res://.godot/imported/Rogue_Idle.png-b95a639885b99989da13d12d9fdc1eaf.ctex"]
+source_file="res://assets/graphical/characters/rogue/rogue_idle.png"
+dest_files=["res://.godot/imported/rogue_idle.png-209b4f308cfd8b32bfcfbb9e33475ac9.ctex"]
 
 [params]
 
