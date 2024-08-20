@@ -5,7 +5,8 @@ The project adheres to GDScript guidelines.
 
 ## Project Goals / To-Do List
 
-This project aims to create a fully functional MMO template with the following features. The list below indicates the current progress:
+This project aims to create a minimalist functional MMO-style game with the following features.  
+The list below indicates the current progress:
 
 - [x] **Synchronizing entities among the players in the same instance.**
 - [x] **Hosting different map instances on a single server and allowing traveling between them.**
