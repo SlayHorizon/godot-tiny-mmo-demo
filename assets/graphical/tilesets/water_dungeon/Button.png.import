@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drqxetxdiqg42"
-path="res://.godot/imported/Button.png-3928ff0f87bc40df72e3200f778a491c.ctex"
+path="res://.godot/imported/button.png-e50cb49bb15a7e576695b894e7ae65b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/tilesets/water_dungeon/Button.png"
-dest_files=["res://.godot/imported/Button.png-3928ff0f87bc40df72e3200f778a491c.ctex"]
+source_file="res://assets/graphical/tilesets/water_dungeon/button.png"
+dest_files=["res://.godot/imported/button.png-e50cb49bb15a7e576695b894e7ae65b6.ctex"]
 
 [params]
 

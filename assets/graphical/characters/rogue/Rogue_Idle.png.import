@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1gubu7iqob2q"
-path="res://.godot/imported/green knight run sprite-sheet 16x17.png-b0b18daaa43a8aec35038bd7b8e2b720.ctex"
+uid="uid://br3423lpwmj2v"
+path="res://.godot/imported/rogue_idle.png-209b4f308cfd8b32bfcfbb9e33475ac9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/old_knight/green knight run sprite-sheet 16x17.png"
-dest_files=["res://.godot/imported/green knight run sprite-sheet 16x17.png-b0b18daaa43a8aec35038bd7b8e2b720.ctex"]
+source_file="res://assets/graphical/characters/rogue/rogue_idle.png"
+dest_files=["res://.godot/imported/rogue_idle.png-209b4f308cfd8b32bfcfbb9e33475ac9.ctex"]
 
 [params]
 

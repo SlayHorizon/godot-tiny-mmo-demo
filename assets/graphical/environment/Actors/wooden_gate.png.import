@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1gubu7iqob2q"
-path="res://.godot/imported/green knight run sprite-sheet 16x17.png-b0b18daaa43a8aec35038bd7b8e2b720.ctex"
+uid="uid://c1p205r8ddroy"
+path="res://.godot/imported/wooden_gate.png-065ca1b2d0c07b455723df05d6f6c2ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/old_knight/green knight run sprite-sheet 16x17.png"
-dest_files=["res://.godot/imported/green knight run sprite-sheet 16x17.png-b0b18daaa43a8aec35038bd7b8e2b720.ctex"]
+source_file="res://assets/graphical/environment/actors/wooden_gate.png"
+dest_files=["res://.godot/imported/wooden_gate.png-065ca1b2d0c07b455723df05d6f6c2ea.ctex"]
 
 [params]
 

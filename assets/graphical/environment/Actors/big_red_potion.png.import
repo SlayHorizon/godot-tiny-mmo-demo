@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1gubu7iqob2q"
-path="res://.godot/imported/green knight run sprite-sheet 16x17.png-b0b18daaa43a8aec35038bd7b8e2b720.ctex"
+uid="uid://ciu5ucvy63v1r"
+path="res://.godot/imported/big_red_potion.png-d3a45feb474a8ce2a0792a8d2d165661.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/graphical/characters/old_knight/green knight run sprite-sheet 16x17.png"
-dest_files=["res://.godot/imported/green knight run sprite-sheet 16x17.png-b0b18daaa43a8aec35038bd7b8e2b720.ctex"]
+source_file="res://assets/graphical/environment/actors/big_red_potion.png"
+dest_files=["res://.godot/imported/big_red_potion.png-d3a45feb474a8ce2a0792a8d2d165661.ctex"]
 
 [params]
 
