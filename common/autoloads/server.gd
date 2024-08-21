@@ -5,13 +5,22 @@ const PORT: int = 8087
 var peer: WebSocketMultiplayerPeer
 var instance_collection: Array[InstanceResource]
 
+@onready var scene_multiplayer := multiplayer as SceneMultiplayer
+
 func start_server() -> void:
-	print("Starting server...")
+	print("Starting server.")
 	peer = WebSocketMultiplayerPeer.new()
+	
 	multiplayer.peer_connected.connect(self._peer_connected)
 	multiplayer.peer_disconnected.connect(self._peer_disconnected)
+	
+	scene_multiplayer.peer_authenticating.connect(self._peer_authenticating)
+	scene_multiplayer.peer_authentication_failed.connect(self._peer_authentication_failed)
+	scene_multiplayer.set_auth_callback(self._on_peer_auth)
+	
 	var server_certificate = load("res://common/server_certificate.crt")
 	var server_key = load("res://server/server_key.key")
+	
 	peer.create_server(PORT, "*", TLSOptions.server(server_key, server_certificate))
 	multiplayer.set_multiplayer_peer(peer)
 
@@ -22,19 +31,19 @@ func _peer_connected(peer_id) -> void:
 func _peer_disconnected(peer_id) -> void:
 	print("Peer: %d is disconnected." % peer_id)
 
+func _peer_authenticating(peer_id: int) -> void:
+	print("Peer: %d is trying to authenticate." % peer_id)
+	scene_multiplayer.send_auth(peer_id, "data_from_server".to_ascii_buffer())
+
+func _peer_authentication_failed(peer_id: int) -> void:
+	print("Peer: %d failed to authenticate." % peer_id)
+
+func _on_peer_auth(peer_id: int, data: PackedByteArray) -> void:
+	print("Peer: %d is trying to connect with data: \"%s\"." % [peer_id, data.get_string_from_utf8()])
+	scene_multiplayer.complete_auth(peer_id)
+
 func get_instance_resource_from_name(instance_name) -> InstanceResource:
 	for instance_resource in instance_collection:
 		if instance_resource.instance_name == instance_name:
 			return instance_resource
 	return null
-
-## Example of how to create a crypto key with its self signed certificate.
-## The private key shouldn't be exported on the client machine.
-static func generate_key_n_cert() -> void:
-	var crypto = Crypto.new()
-	var key = CryptoKey.new()
-	var cert = X509Certificate.new()
-	key = crypto.generate_rsa(4096)
-	cert = crypto.generate_self_signed_certificate(key, "CN=example.com,O=A Game Company,C=IT")
-	key.save("res://server/server_key.key")
-	cert.save("res://common/server_certificate.crt")

@@ -485,21 +485,3 @@ target_instance_name = &"AnotherInstance"
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(296, 186)
-
-[connection signal="body_entered" from="TileMap/Coin" to="TileMap/Coin" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26890" to="TileMap/@Area2D@26890" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26891" to="TileMap/@Area2D@26891" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26892" to="TileMap/@Area2D@26892" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26893" to="TileMap/@Area2D@26893" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26894" to="TileMap/@Area2D@26894" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26895" to="TileMap/@Area2D@26895" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26896" to="TileMap/@Area2D@26896" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26897" to="TileMap/@Area2D@26897" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26898" to="TileMap/@Area2D@26898" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26899" to="TileMap/@Area2D@26899" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26900" to="TileMap/@Area2D@26900" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26901" to="TileMap/@Area2D@26901" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26902" to="TileMap/@Area2D@26902" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26903" to="TileMap/@Area2D@26903" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26904" to="TileMap/@Area2D@26904" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/GroundButton" to="TileMap/GroundButton" method="_on_body_entered"]

@@ -49,7 +49,7 @@ func request_change_instance(new_instance: Dictionary) -> void:
 	instance = InstanceClient.new()
 	add_child(instance)
 	instance.name = new_instance["instance_name"]
-	print("loading new map = ", new_instance["map_path"])
+	print("Loading new map: %s." % new_instance["map_path"])
 	var map: Node2D = load(new_instance["map_path"]).instantiate()
 	map.ready.connect(instance.ready_to_enter_instance)
 	instance.add_child(map)
