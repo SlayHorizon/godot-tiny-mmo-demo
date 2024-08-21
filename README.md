@@ -11,31 +11,31 @@ The project adheres to GDScript guidelines.
 This project aims to create a minimalist multipurpose functional MMO-style game template with the following features.  
 The list below indicates the current progress:
 
-- [X] 1.) **Client-Server connection through WebSocketMultiplayerPeer system.**
-- [ ] 2.) **Client side working on web browser system.**
-- [X] 3.) **Authentication steps before connecting system.**
-- [ ] 4.) **Login UI to authenticate system.**
-- [ ] 5.) **Player character selection log in screen (16+ characters per account) system.**
-- [ ] 6.) **Multiboxing of up to 16 characters from 1 account on 1 client / player / computer system.**
-- [X] 7.) **Synchronizing entities among the players in the same instance system.**
-- [X] 8.) **Hosting different map instances on a single server and allowing traveling between them system.**
-- [ ] 9.) **Private instance for individual players or groups system.**
-- [ ] 10.) **WASD Flare Style ARPG Combat combat system with PvE and PvP system.**
-- [ ] 11.) **Abilities / powers / spells system.**
-- [ ] 12.) **Hotbar GUI support ability / power / spell system.**
-- [ ] 13.) **Entity commands (/follow /stop /hostile /defensive /passive /heal_lowest_ally command) system.**
-- [ ] 14.) **Multiple class build starts to choose at the beginning (Adventurer/Worlder/Multiclass/Build-a-class/Default, Warrior/Knight, Wanderer/Rogue, Wizard/Mage, Warden/Cleric) system.**
-- [ ] 15.) **Experience, character progression / leveling and specialization / skilltrees / powertrees system.**
-- [ ] 16.) **Arbitrary attributes / statistics / damage types and elements system.**
-- [ ] 17.) **Arbitary entity resource (Health, Mana, Spirit etc.) system.**
-- [X] 18.) **Floating Point / Percentage % / Complex Number Support system.**
-- [ ] 19.) **Character / player customization (men and women gender selection and various appearance customization features per character) system.**
-- [ ] 20.) **Visual chararcter equipment and arbitrary character equipment slots system.**
-- [ ] 21.) **Inventory and item storage with arbitrary inventory and item storage slots system.**
-- [ ] 22.) **Colour text item quality / rarity system.**
-- [ ] 23.) **Trade, auction house, in-game mail and economy system.**
-- [ ] 24.) **Step Sounds / Inventory Item Sounds system.**
-- [ ] 25.) **Equipment sets system.**
+- [X] 1.) **Client-Server connection through WebSocketMultiplayerPeer.**
+- [ ] 2.) **Client side working on web browser.**
+- [X] 3.) **Authentication steps before connecting.**
+- [ ] 4.) **Login UI to authenticate.**
+- [ ] 5.) **Player character selection log in screen (16+ characters per account).**
+- [ ] 6.) **Multiboxing of up to 16 characters from 1 account on 1 client / player / computer.**
+- [X] 7.) **Synchronizing entities among the players in the same instance.**
+- [X] 8.) **Hosting different map instances on a single server and allowing traveling between them.**
+- [ ] 9.) **Private instance for individual players or groups.**
+- [ ] 10.) **WASD Flare Style ARPG Combat combat system with PvE and PvP.**
+- [ ] 11.) **Abilities / powers / spells.**
+- [ ] 12.) **Hotbar GUI support ability / power / spell.**
+- [ ] 13.) **Entity commands (/follow /stop /hostile /defensive /passive /heal_lowest_ally command).**
+- [ ] 14.) **Multiple class build starts to choose at the beginning (Adventurer/Worlder/Multiclass/Build-a-class/Default, Warrior/Knight, Wanderer/Rogue, Wizard/Mage, Warden/Cleric).**
+- [ ] 15.) **Experience, character progression / leveling and specialization / skilltrees / powertrees.**
+- [ ] 16.) **Arbitrary attributes / statistics / damage types and elements.**
+- [ ] 17.) **Arbitary entity resource (Health, Mana, Spirit etc.).**
+- [X] 18.) **Floating Point / Percentage % / Complex Number Support.**
+- [ ] 19.) **Character / player customization (men and women gender selection and various appearance customization features per character).**
+- [ ] 20.) **Visual chararcter equipment and arbitrary character equipment slots.**
+- [ ] 21.) **Inventory and item storage with arbitrary inventory and item storage slots.**
+- [ ] 22.) **Colour text item quality / rarity.**
+- [ ] 23.) **Trade, auction house, in-game mail and economy.**
+- [ ] 24.) **Step Sounds / Inventory Item Sounds.**
+- [ ] 25.) **Equipment sets.**
 - [5/25] 20% Feature complete progress.)
 
 
