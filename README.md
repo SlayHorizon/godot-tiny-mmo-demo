@@ -3,22 +3,28 @@
 This repository contains a minimalistic MMO template built using the Godot Engine 4.3.  
 The project adheres to GDScript guidelines.
 
-![image showing the early state of the project](https://media.discordapp.net/attachments/1253250780400582668/1275111243580969034/image.png?ex=66c75662&is=66c604e2&hm=f9929a9e12dc31ea74a14c5a0f3cd2a323f0a70201857cb21a65a5ba0c677696&=&format=webp&quality=lossless&width=1994&height=1122)
+![M.M.O.A.R.P.G. (V.000.007) Godot-Tiny-MMO-Template-0.0.3 Godot 4.3 NET+ Dungeon Gathering Online (0)(Frontpage Github Contributor)(Image showing the early state of the project)](https://github.com/user-attachments/assets/017df4d6-a6fa-465c-a9ea-d74cf1c27393)
 
 ## Project Goals / To-Do List
 
-This project aims to create a minimalist functional MMO-style game with the following features.  
+This project aims to create a minimalist multipurpose functional MMO-style game with the following features.  
 The list below indicates the current progress:
 
-- [x] **Client-Server connection through WebSocketMultiplayerPeer.**
+- [X] **Client-Server connection through WebSocketMultiplayerPeer.**
 - [ ] **Client side working on web browser.**
-- [x] **Authentication steps before connecting.**
-- [ ] **Login UI to authenticate.** 
-- [x] **Synchronizing entities among the players in the same instance.**
-- [x] **Hosting different map instances on a single server and allowing traveling between them.**
-- [ ] **Simple combat system with PvE and PvP**
-- [ ] **Private instance for individual players or groups**  
-- [ ] **Inventory system**  
+- [X] **Authentication steps before connecting.**
+- [ ] **Login UI to authenticate.**
+- [ ] **Player character customization.**
+- [X] **Synchronizing entities among the players in the same instance.**
+- [X] **Hosting different map instances on a single server and allowing traveling between them.**
+- [ ] **Private instance for individual players or groups.**
+- [ ] **Multiple character class (Warrior/Knight, Archer/Rogue, Wizard/Mage, Warden/Cleric).**
+- [ ] **Experience and leveling.**
+- [ ] **Mobs hosted and managed by the server.**
+- [ ] **Basic combat system with PvE and PvP.**
+- [ ] **Arbitary entity resource (Health, Mana etc.).**. 
+And probably more later.
+
 
 See the [open issues](https://github.com/SlayHorizon/godot-tiny-mmo-template/issues) for a full list of proposed features (and known issues).  
 
@@ -28,9 +34,14 @@ To get started with the project:
 1. Clone this repository.
 2. Launch it with Godot 4.3.
 3. In Debug tab, choose "Customizable Run Instance...".
-4. Enable Multiple Instances and set 3.
-5. Under feature tags, be sure to have 2 "client" and 1 "server.
+4. Enable Multiple Instances and set at least 2 or more..
+5. Under feature tags, be sure to have only 1 "server" tag and at least 1 or more "client" tag.
 6. Play the project.
+
+Example with 17 instances:
+![M M O A R P G (V 000 007) Godot-Tiny-MMO-Template-0 0 3 Godot 4 3 NET+ Dungeon Gathering Online (1)(Frontpage Github Contributor)](https://github.com/user-attachments/assets/5ca8d95d-c78b-4027-8c23-77d4e987b4ef)
+
+
 
 ## Contributing
 
