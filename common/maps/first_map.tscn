@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://sscb58nigni8"]
+[gd_scene load_steps=11 format=3 uid="uid://sscb58nigni8"]
 
-[ext_resource type="PackedScene" uid="uid://bbjugx8rxkt6i" path="res://client/gui/main_hud.tscn" id="1_4q71w"]
-[ext_resource type="Texture2D" uid="uid://bes7wghqaghle" path="res://assets/graphical/tilesets/water_dungeon/blue_dg_tileset.png" id="1_i8p5v"]
-[ext_resource type="Texture2D" uid="uid://dm0ou147lehy8" path="res://assets/graphical/tilesets/water_dungeon/Set 1.2.png" id="2_4g4cg"]
+[ext_resource type="Texture2D" uid="uid://bes7wghqaghle" path="res://assets/sprites/tilesets/water_dungeon/blue_dg_tileset.png" id="1_i8p5v"]
+[ext_resource type="Texture2D" uid="uid://dm0ou147lehy8" path="res://assets/sprites/tilesets/water_dungeon/set 1.2.png" id="2_4g4cg"]
 [ext_resource type="PackedScene" uid="uid://digkg4swbl27x" path="res://client/map_objects/collectibles/coin.tscn" id="3_ef1ij"]
 [ext_resource type="PackedScene" uid="uid://hcfiu2vpqr3u" path="res://client/map_objects/doors/activable_door/activable_door.tscn" id="4_0lkki"]
 [ext_resource type="PackedScene" uid="uid://bojii5hxh2lgh" path="res://client/map_objects/ground_button/ground_button.tscn" id="5_mlcfb"]
@@ -487,8 +486,20 @@ target_instance_name = &"AnotherInstance"
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(296, 186)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-scale = Vector2(4, 4)
-transform = Transform2D(4, 0, 0, 4, 0, 0)
-
-[node name="main_hud" parent="CanvasLayer" instance=ExtResource("1_4q71w")]
+[connection signal="body_entered" from="TileMap/Coin" to="TileMap/Coin" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26890" to="TileMap/@Area2D@26890" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26891" to="TileMap/@Area2D@26891" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26892" to="TileMap/@Area2D@26892" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26893" to="TileMap/@Area2D@26893" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26894" to="TileMap/@Area2D@26894" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26895" to="TileMap/@Area2D@26895" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26896" to="TileMap/@Area2D@26896" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26897" to="TileMap/@Area2D@26897" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26898" to="TileMap/@Area2D@26898" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26899" to="TileMap/@Area2D@26899" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26900" to="TileMap/@Area2D@26900" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26901" to="TileMap/@Area2D@26901" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26902" to="TileMap/@Area2D@26902" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26903" to="TileMap/@Area2D@26903" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/@Area2D@26904" to="TileMap/@Area2D@26904" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMap/GroundButton" to="TileMap/GroundButton" method="_on_body_entered"]
