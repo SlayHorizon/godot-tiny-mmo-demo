@@ -3,6 +3,8 @@
 This repository contains a minimalistic MMO template built using the Godot Engine 4.3.  
 The project adheres to GDScript guidelines.
 
+![image showing the early state of the project](https://media.discordapp.net/attachments/1253250780400582668/1275111243580969034/image.png?ex=66c75662&is=66c604e2&hm=f9929a9e12dc31ea74a14c5a0f3cd2a323f0a70201857cb21a65a5ba0c677696&=&format=webp&quality=lossless&width=1994&height=1122)
+
 ## Project Goals / To-Do List
 
 This project aims to create a minimalist functional MMO-style game with the following features.  
