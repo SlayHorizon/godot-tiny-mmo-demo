@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://sscb58nigni8"]
+[gd_scene load_steps=12 format=3 uid="uid://sscb58nigni8"]
 
+[ext_resource type="PackedScene" uid="uid://bbjugx8rxkt6i" path="res://client/gui/main_hud.tscn" id="1_4q71w"]
 [ext_resource type="Texture2D" uid="uid://bes7wghqaghle" path="res://assets/graphical/tilesets/water_dungeon/blue_dg_tileset.png" id="1_i8p5v"]
 [ext_resource type="Texture2D" uid="uid://dm0ou147lehy8" path="res://assets/graphical/tilesets/water_dungeon/Set 1.2.png" id="2_4g4cg"]
 [ext_resource type="PackedScene" uid="uid://digkg4swbl27x" path="res://client/map_objects/collectibles/coin.tscn" id="3_ef1ij"]
@@ -486,20 +487,8 @@ target_instance_name = &"AnotherInstance"
 [node name="SpawnPoint" type="Marker2D" parent="."]
 position = Vector2(296, 186)
 
-[connection signal="body_entered" from="TileMap/Coin" to="TileMap/Coin" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26697" to="TileMap/@Area2D@26697" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26698" to="TileMap/@Area2D@26698" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26699" to="TileMap/@Area2D@26699" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26700" to="TileMap/@Area2D@26700" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26701" to="TileMap/@Area2D@26701" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26702" to="TileMap/@Area2D@26702" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26703" to="TileMap/@Area2D@26703" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26704" to="TileMap/@Area2D@26704" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26705" to="TileMap/@Area2D@26705" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26706" to="TileMap/@Area2D@26706" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26707" to="TileMap/@Area2D@26707" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26708" to="TileMap/@Area2D@26708" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26709" to="TileMap/@Area2D@26709" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26710" to="TileMap/@Area2D@26710" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/@Area2D@26711" to="TileMap/@Area2D@26711" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMap/GroundButton" to="TileMap/GroundButton" method="_on_body_entered"]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2(4, 4)
+transform = Transform2D(4, 0, 0, 4, 0, 0)
+
+[node name="main_hud" parent="CanvasLayer" instance=ExtResource("1_4q71w")]

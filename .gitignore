@@ -2,3 +2,5 @@
 .godot/
 /android/
 *.DS_Store
+*.import
+*.aseprite
