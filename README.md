@@ -1,6 +1,6 @@
-# Godot Tiny MMO Template
+ # Godot Tiny MMO Demo
 
-This repository contains a minimalistic MMO template built using the Godot Engine 4.3.  
+This repository contains a minimalistic MMO demo built using the Godot Engine 4.3.  
 The project adheres to GDScript guidelines.
 
 ![M.M.O.A.R.P.G. (V.000.007) Godot-Tiny-MMO-Template-0.0.3 Godot 4.3 NET+ Dungeon Gathering Online (0)(Frontpage Github Contributor)(Image showing the early state of the project)](https://github.com/user-attachments/assets/017df4d6-a6fa-465c-a9ea-d74cf1c27393)
@@ -55,7 +55,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 ## Contributors
 <a href = "https://github.com/SlayHorizon/simple-sqlite/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo=SlayHorizon/godot-tiny-mmo-template"/>
+  <img src = "https://contrib.rocks/image?repo=SlayHorizon/godot-tiny-mmo-demo"/>
 </a>  
 
 Also thanks to [@Anokolisa](https://anokolisa.itch.io/dungeon-crawler-pixel-art-asset-pack) for allowing us to use its assets for an open source project!
