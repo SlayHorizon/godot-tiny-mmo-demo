@@ -8,9 +8,12 @@ The project adheres to GDScript guidelines.
 This project aims to create a minimalist functional MMO-style game with the following features.  
 The list below indicates the current progress:
 
+- [x] **Client-Server connection through WebSocketMultiplayerPeer.**
+- [ ] **Client side working on web browser.**
+- [x] **Authentication steps before connecting.**
+- [ ] **Login UI to authenticate.** 
 - [x] **Synchronizing entities among the players in the same instance.**
 - [x] **Hosting different map instances on a single server and allowing traveling between them.**
-- [ ] **Authentication system with login UI**
 - [ ] **Simple combat system with PvE and PvP**
 - [ ] **Private instance for individual players or groups**  
 - [ ] **Inventory system**  
