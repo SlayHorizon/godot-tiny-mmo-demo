@@ -16,11 +16,12 @@ The list below indicates the current progress and goals:
 - [X] **Synchronizing entities among the players in the same instance.**
 - [X] **Hosting different map instances on a single server and allowing traveling between them.**
 - [ ] **Private instance for individual players or groups.**
-- [ ] **Multiple character class (Warrior/Knight, Archer/Rogue, Wizard/Mage, Warden/Cleric).**
+- [ ] **3 character classes to get started with: Knight, Rogue, Wizard.**
 - [ ] **Experience and leveling.**
 - [ ] **Mobs hosted and managed by the server.**
 - [ ] **Basic combat system with PvE and PvP.**
-And probably more later.
+ 
+And maybe more later.
 
 
 See the [open issues](https://github.com/SlayHorizon/godot-tiny-mmo-template/issues) for a full list of proposed features (and known issues).  
