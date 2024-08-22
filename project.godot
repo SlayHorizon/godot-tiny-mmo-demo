@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Dungeon Gathering Online"
+config/name="Godot Tiny MMO"
 run/main_scene="res://common/main/main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
@@ -27,10 +27,11 @@ gdscript/warnings/unused_signal=0
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=960
+window/size/viewport_height=540
 window/size/window_width_override=960
 window/size/window_height_override=540
+window/stretch/mode="canvas_items"
 
 [file_customization]
 

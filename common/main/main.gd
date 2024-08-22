@@ -2,13 +2,11 @@ extends Node
 
 ## Main.
 
+var instance: InstanceClient
+
 func _ready() -> void:
 	if OS.has_feature("client"):
-		await get_tree().create_timer(1.0).timeout
-		add_child(
-			load("res://client/instance_client/instance_client.tscn").instantiate()
-		)
-		Client.connect_to_server()
+		add_child(load("res://client/ui/login_menu/login_menu.tscn").instantiate())
 	elif OS.has_feature("server"):
 		setup_server()
 
@@ -44,8 +42,8 @@ func get_all_file_paths(path: String) -> Array[String]:
 
 @rpc("authority", "call_remote", "reliable", 0)
 func request_change_instance(new_instance: Dictionary) -> void:
-	var instance = get_child(0) # Bad
-	instance.queue_free()
+	if instance:
+		instance.queue_free()
 	instance = InstanceClient.new()
 	add_child(instance)
 	instance.name = new_instance["instance_name"]

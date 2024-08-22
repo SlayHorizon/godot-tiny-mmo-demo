@@ -38,9 +38,28 @@ func _peer_authenticating(peer_id: int) -> void:
 func _peer_authentication_failed(peer_id: int) -> void:
 	print("Peer: %d failed to authenticate." % peer_id)
 
+# Quick and dirty. It needs serious rework.
 func _on_peer_auth(peer_id: int, data: PackedByteArray) -> void:
-	print("Peer: %d is trying to connect with data: \"%s\"." % [peer_id, data.get_string_from_utf8()])
-	scene_multiplayer.complete_auth(peer_id)
+	var dict := bytes_to_var(data) as Dictionary
+	print("Peer: %d is trying to connect with data: \"%s\"." % [peer_id, dict])
+	if is_valid_authentication_data(dict):
+		scene_multiplayer.complete_auth(peer_id)
+	else:
+		peer.disconnect_peer(peer_id)
+
+func is_valid_authentication_data(data: Dictionary) -> bool:
+	var player_name: String
+	var player_class: String
+	if data.has("username") and data.has("class"):
+		player_name = data["username"] as String
+		player_class = data["class"] as String
+	else:
+		return false
+	if not player_name.is_valid_identifier() or not player_name.length() < 10:
+		return false
+	elif not player_class in ["knight", "rogue", "mage"]:
+		return false
+	return true
 
 func get_instance_resource_from_name(instance_name) -> InstanceResource:
 	for instance_resource in instance_collection:
