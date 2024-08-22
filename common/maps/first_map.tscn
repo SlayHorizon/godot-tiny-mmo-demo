@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bes7wghqaghle" path="res://assets/sprites/tilesets/water_dungeon/blue_dg_tileset.png" id="1_i8p5v"]
 [ext_resource type="Texture2D" uid="uid://dm0ou147lehy8" path="res://assets/sprites/tilesets/water_dungeon/set 1.2.png" id="2_4g4cg"]
-[ext_resource type="TileSet" uid="uid://cw70ipnip703i" path="res://common/resources/tile_set_collection/dungeon_tileset.tres" id="2_c4reb"]
+[ext_resource type="TileSet" uid="uid://cw70ipnip703i" path="res://common/resources/builtin/tile_set_collection/dungeon_tileset.tres" id="2_c4reb"]
 [ext_resource type="PackedScene" uid="uid://digkg4swbl27x" path="res://client/map_objects/collectibles/coin.tscn" id="3_ef1ij"]
 [ext_resource type="PackedScene" uid="uid://hcfiu2vpqr3u" path="res://client/map_objects/doors/activable_door/activable_door.tscn" id="4_0lkki"]
 [ext_resource type="PackedScene" uid="uid://bojii5hxh2lgh" path="res://client/map_objects/ground_button/ground_button.tscn" id="5_mlcfb"]
@@ -508,21 +508,3 @@ tile_set = SubResource("TileSet_ethdr")
 position = Vector2(312, -19)
 scale = Vector2(2.37041, 0.841242)
 target_instance_name = &"AnotherInstance"
-
-[connection signal="body_entered" from="Props/Coin" to="Props/Coin" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54861" to="Props/@Area2D@54861" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54862" to="Props/@Area2D@54862" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54863" to="Props/@Area2D@54863" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54864" to="Props/@Area2D@54864" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54865" to="Props/@Area2D@54865" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54866" to="Props/@Area2D@54866" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54867" to="Props/@Area2D@54867" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54868" to="Props/@Area2D@54868" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54869" to="Props/@Area2D@54869" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54870" to="Props/@Area2D@54870" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54871" to="Props/@Area2D@54871" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54872" to="Props/@Area2D@54872" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54873" to="Props/@Area2D@54873" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54874" to="Props/@Area2D@54874" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@54875" to="Props/@Area2D@54875" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/GroundButton" to="Props/GroundButton" method="_on_body_entered"]

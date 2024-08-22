@@ -15,7 +15,7 @@ func setup_server() -> void:
 	DisplayServer.window_set_title("Server")
 	get_window().position = Vector2(0, 0)
 	var instance_resources: Array[InstanceResource]
-	for file_path in get_all_file_paths("res://common/resources/instance_resources/instance_collection/"):
+	for file_path in get_all_file_paths("res://common/resources/custom/instance_resources/instance_collection/"):
 		instance_resources.append(ResourceLoader.load(file_path))
 	Server.instance_collection.append_array(instance_resources)
 	for instance_resource in instance_resources:
