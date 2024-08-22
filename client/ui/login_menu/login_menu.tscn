@@ -37,6 +37,7 @@ horizontal_alignment = 1
 [node name="EnterNameInput" type="LineEdit" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+text = "Unknown"
 placeholder_text = "Enter your name here"
 max_length = 9
 
