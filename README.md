@@ -1,14 +1,12 @@
  # Godot Tiny MMO Demo
 
-This repository contains a minimalistic MMO demo built using the Godot Engine 4.3.  
-The project adheres to GDScript guidelines.
+A minimalistic MMO demo built using the Godot Engine 4.3.  
 
 ![M.M.O.A.R.P.G. (V.000.007) Godot-Tiny-MMO-Template-0.0.3 Godot 4.3 NET+ Dungeon Gathering Online (0)(Frontpage Github Contributor)(Image showing the early state of the project)](https://github.com/user-attachments/assets/017df4d6-a6fa-465c-a9ea-d74cf1c27393)
 
 ## Project Goals / To-Do List
 
-This project aims to create a minimalist multipurpose functional MMO-style game with the following features.  
-The list below indicates the current progress:
+The list below indicates the current progress and goals:
 
 - [X] **Client-Server connection through WebSocketMultiplayerPeer.**
 - [ ] **Client side working on web browser.**
@@ -22,7 +20,6 @@ The list below indicates the current progress:
 - [ ] **Experience and leveling.**
 - [ ] **Mobs hosted and managed by the server.**
 - [ ] **Basic combat system with PvE and PvP.**
-- [ ] **Arbitary entity resource (Health, Mana etc.).**. 
 And probably more later.
 
 
@@ -53,9 +50,10 @@ If you have a suggestion that would make this better, please fork the repo and c
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Contributors
+## Contributors & Credits.
 <a href = "https://github.com/SlayHorizon/simple-sqlite/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo=SlayHorizon/godot-tiny-mmo-demo"/>
 </a>  
 
+Screen shots from @WithinAmnesia.  
 Also thanks to [@Anokolisa](https://anokolisa.itch.io/dungeon-crawler-pixel-art-asset-pack) for allowing us to use its assets for an open source project!
