@@ -1,43 +1,40 @@
 [gd_scene load_steps=21 format=3 uid="uid://digkg4swbl27x"]
 
 [ext_resource type="Script" path="res://client/map_objects/collectibles/coin.gd" id="1_73yf6"]
-[ext_resource type="Texture2D" uid="uid://7karol6x64qw" path="res://assets/sprites/collectibles/coins/blue_coin.png" id="2_kyas2"]
+[ext_resource type="Texture2D" uid="uid://dxyjvwsxmf0kd" path="res://assets/sprites/collectibles/coins/blue_coin.png" id="2_kyas2"]
+[ext_resource type="Texture2D" uid="uid://bj7nw05c344g5" path="res://assets/sprites/environment_objects/gold_coin.png" id="2_mlfwo"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ui54f"]
-atlas = ExtResource("2_kyas2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpnqk"]
+atlas = ExtResource("2_mlfwo")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b600p"]
-atlas = ExtResource("2_kyas2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wliry"]
+atlas = ExtResource("2_mlfwo")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ruygg"]
-atlas = ExtResource("2_kyas2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6m76"]
+atlas = ExtResource("2_mlfwo")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gijhm"]
-atlas = ExtResource("2_kyas2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2yhr"]
+atlas = ExtResource("2_mlfwo")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_syemo"]
-atlas = ExtResource("2_kyas2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8hy3"]
+atlas = ExtResource("2_mlfwo")
 region = Rect2(64, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fo7sv"]
-atlas = ExtResource("2_kyas2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pqyi"]
+atlas = ExtResource("2_mlfwo")
 region = Rect2(80, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cskyw"]
-atlas = ExtResource("2_kyas2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_gu8tq"]
+atlas = ExtResource("2_mlfwo")
 region = Rect2(96, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oae37"]
-atlas = ExtResource("2_kyas2")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph4dk"]
+atlas = ExtResource("2_mlfwo")
 region = Rect2(112, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iiv8x"]
-atlas = ExtResource("2_kyas2")
-region = Rect2(0, 16, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_synje"]
 atlas = ExtResource("2_kyas2")
@@ -71,31 +68,28 @@ region = Rect2(112, 16, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ui54f")
+"texture": SubResource("AtlasTexture_jpnqk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b600p")
+"texture": SubResource("AtlasTexture_wliry")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ruygg")
+"texture": SubResource("AtlasTexture_v6m76")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gijhm")
+"texture": SubResource("AtlasTexture_x2yhr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_syemo")
+"texture": SubResource("AtlasTexture_s8hy3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fo7sv")
+"texture": SubResource("AtlasTexture_6pqyi")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cskyw")
+"texture": SubResource("AtlasTexture_gu8tq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oae37")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iiv8x")
+"texture": SubResource("AtlasTexture_ph4dk")
 }],
 "loop": true,
 "name": &"blue_coin",
