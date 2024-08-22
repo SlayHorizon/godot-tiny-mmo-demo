@@ -1,11 +1,11 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://cw70ipnip703i"]
 
-[ext_resource type="Texture2D" uid="uid://wahilk4bnjts" path="res://assets/sprites/environment/dungeon prison/Dungeon_Tiles.png" id="1_stekh"]
-[ext_resource type="Texture2D" uid="uid://doj07yaqbm630" path="res://assets/sprites/environment/dungeon prison/props.png" id="2_5uxib"]
-[ext_resource type="Texture2D" uid="uid://lacw3f38cat4" path="res://assets/sprites/environment/dungeon prison/tiles.png" id="3_wavfl"]
+[ext_resource type="Texture2D" uid="uid://wahilk4bnjts" path="res://assets/sprites/environment/dungeon_prison/Dungeon_Tiles.png" id="1_htk26"]
+[ext_resource type="Texture2D" uid="uid://doj07yaqbm630" path="res://assets/sprites/environment/dungeon_prison/props.png" id="2_ab6ml"]
+[ext_resource type="Texture2D" uid="uid://lacw3f38cat4" path="res://assets/sprites/environment/dungeon_prison/tiles.png" id="3_j87f1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gri28"]
-texture = ExtResource("1_stekh")
+texture = ExtResource("1_htk26")
 0:0/0 = 0
 0:0/0/terrain_set = 0
 0:0/0/terrain = 0
@@ -393,9 +393,9 @@ texture = ExtResource("1_stekh")
 2:3/1/terrains_peering_bit/top_right_corner = 5
 4:3/0 = 0
 4:3/0/terrain_set = 0
-4:3/0/terrain = 0
+4:3/0/terrain = 4
 4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:3/0/terrains_peering_bit/right_side = 0
+4:3/0/terrains_peering_bit/right_side = 4
 4:3/0/terrains_peering_bit/bottom_right_corner = 4
 4:3/0/terrains_peering_bit/bottom_side = 4
 4:3/0/terrains_peering_bit/bottom_left_corner = 4
@@ -405,13 +405,13 @@ texture = ExtResource("1_stekh")
 4:3/0/terrains_peering_bit/top_right_corner = 0
 5:3/0 = 0
 5:3/0/terrain_set = 0
-5:3/0/terrain = 0
+5:3/0/terrain = 4
 5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:3/0/terrains_peering_bit/right_side = 0
 5:3/0/terrains_peering_bit/bottom_right_corner = 4
 5:3/0/terrains_peering_bit/bottom_side = 4
 5:3/0/terrains_peering_bit/bottom_left_corner = 4
-5:3/0/terrains_peering_bit/left_side = 0
+5:3/0/terrains_peering_bit/left_side = 4
 5:3/0/terrains_peering_bit/top_left_corner = 0
 5:3/0/terrains_peering_bit/top_side = 0
 5:3/0/terrains_peering_bit/top_right_corner = 0
@@ -755,10 +755,7 @@ texture = ExtResource("1_stekh")
 3:4/0/terrains_peering_bit/top_right_corner = 5
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_saoip"]
-texture = ExtResource("2_5uxib")
-0:0/0 = 0
-1:0/0 = 0
-3:0/0 = 0
+texture = ExtResource("2_ab6ml")
 4:0/0 = 0
 5:0/0 = 0
 6:0/0 = 0
@@ -767,10 +764,8 @@ texture = ExtResource("2_5uxib")
 9:0/0 = 0
 10:0/0 = 0
 11:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
 2:1/0 = 0
-3:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -2, 6, -2, 6, 6, -6, 6)
 4:1/0 = 0
 5:1/0 = 0
 6:1/0 = 0
@@ -781,10 +776,10 @@ texture = ExtResource("2_5uxib")
 11:1/0 = 0
 12:1/0 = 0
 13:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
 2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -2, 6, -2, 6, 6, -6, 6)
 3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -2, 6, -2, 6, 6, -6, 6)
 4:2/0 = 0
 5:2/0 = 0
 6:2/0 = 0
@@ -795,10 +790,10 @@ texture = ExtResource("2_5uxib")
 11:2/0 = 0
 12:2/0 = 0
 13:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
 2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -2, 6, -2, 6, 6, -6, 6)
 3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -2, 6, -2, 6, 6, -6, 6)
 4:3/0 = 0
 5:3/0 = 0
 6:3/0 = 0
@@ -809,7 +804,9 @@ texture = ExtResource("2_5uxib")
 11:3/0 = 0
 12:3/0 = 0
 0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:4/0 = 0
 3:4/0 = 0
 4:4/0 = 0
@@ -950,9 +947,29 @@ texture = ExtResource("2_5uxib")
 7:15/0 = 0
 8:15/0 = 0
 9:15/0 = 0
+0:2/size_in_atlas = Vector2i(1, 2)
+0:2/0 = 0
+0:2/0/texture_origin = Vector2i(0, 8)
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/size_in_atlas = Vector2i(1, 2)
+1:2/0 = 0
+1:2/0/texture_origin = Vector2i(0, 8)
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/size_in_atlas = Vector2i(1, 2)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/size_in_atlas = Vector2i(1, 2)
+1:0/0 = 0
+1:0/0/texture_origin = Vector2i(0, 8)
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/size_in_atlas = Vector2i(1, 2)
+3:0/0 = 0
+3:0/0/texture_origin = Vector2i(0, 8)
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -2, 6, -2, 6, 6, -6, 6)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ce1kn"]
-texture = ExtResource("3_wavfl")
+texture = ExtResource("3_j87f1")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0

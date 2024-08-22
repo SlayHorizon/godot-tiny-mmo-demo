@@ -12,7 +12,7 @@ var state: String = "idle"
 @onready var cursor: Sprite2D = $Cursor
 
 func _ready() -> void:
-	animated_sprite.play(&"idle_down")
+	animated_sprite.play(&"idle")
 	# Cursor animation
 	var tween: Tween = create_tween()
 	tween.set_loops()
@@ -27,7 +27,7 @@ func _physics_process(_delta: float) -> void:
 
 func move() -> void:
 	velocity = input_direction * speed
-	state = "walk" if velocity else "idle"
+	state = "run" if velocity else "idle"
 	move_and_slide()
 
 func check_inputs() -> void:
@@ -39,6 +39,7 @@ func check_inputs() -> void:
 	interact_input = Input.is_action_just_pressed("interact")
 
 func update_animation() -> void:
+	#replace with look left or right based on mouse position relative to the character
 	var sprite_direction: String = "_down"
 	match last_input_direction:
 		Vector2.RIGHT:
@@ -50,7 +51,7 @@ func update_animation() -> void:
 		Vector2.DOWN:
 			sprite_direction = "_down"
 	#animated_sprite.play(state + sprite_direction)
-	animation = state + sprite_direction
+	animation = state# + sprite_direction # disabled to fix animation issues
 
 func define_sync_state() -> void:
 	# Should convert to packedbytes for optimization ?

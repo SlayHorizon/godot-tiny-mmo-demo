@@ -7,7 +7,7 @@ var equiped_item: ItemResource
 var display_name: String = "Player":
 	set = _set_display_name
 
-var animation: String = "idle_down":
+var animation: String = "idle":
 	set = _set_animation
 
 var is_in_pvp_zone: bool = false
