@@ -11,7 +11,7 @@ var display_name: String = "Player":
 var animation: String = "idle":
 	set = _set_animation
 
-var direction: Vector2 = Vector2.RIGHT:
+var direction: bool = false:
 	set = _set_direction
 
 var sprite_frames: String = "knight":
@@ -32,9 +32,9 @@ func _set_animation(new_animation: String) -> void:
 	animation = new_animation
 	animated_sprite.play(new_animation)
 
-func _set_direction(new_direction: Vector2) -> void:
+func _set_direction(new_direction: bool) -> void:
 	direction = new_direction
-	animated_sprite.flip_h = true if new_direction.x < 0 else false
+	animated_sprite.flip_h = direction
 
 func _set_sprite_frames(new_sprite_frames: String) -> void:
 	# Bad design, not scalable and optimized
