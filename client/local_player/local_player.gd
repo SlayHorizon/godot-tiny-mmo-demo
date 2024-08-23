@@ -40,11 +40,6 @@ func check_inputs() -> void:
 
 func update_animation() -> void:
 	var mouse_position := get_global_mouse_position()
-	var mouse_direction := Vector2(
-		-1 if (mouse_position.x < global_position.x) else 1, 
-		-1 if (mouse_position.y < global_position.y) else 1
-	)
-	
 	direction = (mouse_position.x < global_position.x)
 	animation = state
 
