@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://clxigyedrpunv"
+path="res://.godot/imported/green knight idle sprite-sheet 16x16.png-7d03f5cf0873e7b9e686e5c50e665b9d.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/sprites/characters/old_knight/green knight idle sprite-sheet 16x16.png"
+dest_files=["res://.godot/imported/green knight idle sprite-sheet 16x16.png-7d03f5cf0873e7b9e686e5c50e665b9d.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
