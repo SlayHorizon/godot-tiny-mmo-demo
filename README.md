@@ -11,15 +11,15 @@ The list below indicates the current progress and goals:
 - [X] **Client-Server connection through WebSocketMultiplayerPeer.**
 - [ ] **Client side working on web browser.**
 - [X] **Authentication steps before connecting.**
-- [ ] **Login UI to authenticate.**
-- [ ] **Player character customization.**
+- [x] **Login UI to authenticate.**
+- [x] **Player character customization.**
 - [X] **Synchronizing entities among the players in the same instance.**
 - [X] **Hosting different map instances on a single server and allowing traveling between them.**
+- [ ] **Basic RPG class system with 3 classes to get started with: Knight, Rogue, Wizard.**
 - [ ] **Private instance for individual players or groups.**
-- [ ] **3 character classes to get started with: Knight, Rogue, Wizard.**
-- [ ] **Experience and leveling.**
 - [ ] **Mobs hosted and managed by the server.**
 - [ ] **Basic combat system with PvE and PvP.**
+- [ ] **Experience and leveling.**
  
 And maybe more later.
 
