@@ -5,6 +5,8 @@ const PORT: int = 8087
 var peer: WebSocketMultiplayerPeer
 var instance_collection: Array[InstanceResource]
 
+var player_list: Dictionary
+
 @onready var scene_multiplayer := multiplayer as SceneMultiplayer
 
 func start_server() -> void:
@@ -30,6 +32,7 @@ func _peer_connected(peer_id) -> void:
 
 func _peer_disconnected(peer_id) -> void:
 	print("Peer: %d is disconnected." % peer_id)
+	player_list.erase(peer_id)
 
 func _peer_authenticating(peer_id: int) -> void:
 	print("Peer: %d is trying to authenticate." % peer_id)
@@ -44,6 +47,7 @@ func _on_peer_auth(peer_id: int, data: PackedByteArray) -> void:
 	print("Peer: %d is trying to connect with data: \"%s\"." % [peer_id, dict])
 	if is_valid_authentication_data(dict):
 		scene_multiplayer.complete_auth(peer_id)
+		player_list[peer_id] = dict
 	else:
 		peer.disconnect_peer(peer_id)
 
@@ -57,7 +61,7 @@ func is_valid_authentication_data(data: Dictionary) -> bool:
 		return false
 	if not player_name.is_valid_identifier() or not player_name.length() < 10:
 		return false
-	elif not player_class in ["knight", "rogue", "mage"]:
+	elif not player_class in ["knight", "rogue", "wizard"]:
 		return false
 	return true
 

@@ -49,7 +49,10 @@ func spawn_player(player_id: int, spawn_state: Dictionary = {}) -> void:
 	var spawn_position := Vector2.ZERO
 	if get_child(0).has_node("SpawnPoint"):
 		spawn_position = get_child(0).get_node("SpawnPoint").global_position
-	spawn_state = {"position": spawn_position}
+	spawn_state = {
+		"position": spawn_position,
+		"sprite_frames": Server.player_list[player_id]["class"]
+	}
 	new_player.name = str(player_id)
 	new_player.spawn_state = spawn_state
 	add_child(new_player, true)
@@ -60,7 +63,7 @@ func spawn_player(player_id: int, spawn_state: Dictionary = {}) -> void:
 	for peer_id: int in connected_peers:
 		spawn_player.rpc_id(peer_id, player_id, new_player.spawn_state)
 		if player_id != peer_id:
-			spawn_player.rpc_id(player_id, peer_id, spawn_state)
+			spawn_player.rpc_id(player_id, peer_id, entity_collection[peer_id].spawn_state)
 
 @rpc("authority", "call_remote", "reliable", 0)
 func despawn_player(player_id: int) -> void:

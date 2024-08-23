@@ -53,5 +53,7 @@ func _set_sync_state(new_state) -> void:
 
 func _set_spawn_state(new_state) -> void:
 	spawn_state = new_state
+	if not is_node_ready():
+		await ready
 	for property: String in new_state:
 		set(property, new_state[property])
