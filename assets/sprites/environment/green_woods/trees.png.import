@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wahilk4bnjts"
-path="res://.godot/imported/Dungeon_Tiles.png-d87055ddcae3ee13c21bc2f961cd42f6.ctex"
+uid="uid://bqpcnh5waadxj"
+path="res://.godot/imported/trees.png-3246f1ce304db6185a175be174affb9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/environment/dungeon prison/Dungeon_Tiles.png"
-dest_files=["res://.godot/imported/Dungeon_Tiles.png-d87055ddcae3ee13c21bc2f961cd42f6.ctex"]
+source_file="res://assets/sprites/environment/green_woods/trees.png"
+dest_files=["res://.godot/imported/trees.png-3246f1ce304db6185a175be174affb9e.ctex"]
 
 [params]
 

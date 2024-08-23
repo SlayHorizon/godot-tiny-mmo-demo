@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drqxetxdiqg42"
-path="res://.godot/imported/button.png-b2a4327e39cbe9a7383983b17ac3e60f.ctex"
+uid="uid://d31e3fh8n3lee"
+path="res://.godot/imported/gold_coin.png-a8ac1daab674e8f253881d52361fff7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tilesets/water_dungeon/button.png"
-dest_files=["res://.godot/imported/button.png-b2a4327e39cbe9a7383983b17ac3e60f.ctex"]
+source_file="res://assets/sprites/environment/environment_objects/gold_coin.png"
+dest_files=["res://.godot/imported/gold_coin.png-a8ac1daab674e8f253881d52361fff7b.ctex"]
 
 [params]
 

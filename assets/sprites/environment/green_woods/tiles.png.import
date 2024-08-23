@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pje7mi0a2s1k"
-path="res://.godot/imported/barrel.png-002be79585a5d3c0ec83a23a1bf1a3f6.ctex"
+uid="uid://bcn8tk718fjiv"
+path="res://.godot/imported/tiles.png-4562d94296c9fbb90537b16332b1127b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/environment_objects/barrel.png"
-dest_files=["res://.godot/imported/barrel.png-002be79585a5d3c0ec83a23a1bf1a3f6.ctex"]
+source_file="res://assets/sprites/environment/green_woods/tiles.png"
+dest_files=["res://.godot/imported/tiles.png-4562d94296c9fbb90537b16332b1127b.ctex"]
 
 [params]
 

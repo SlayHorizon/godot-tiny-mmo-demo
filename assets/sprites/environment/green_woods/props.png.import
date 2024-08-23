@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8jypow6ah73g"
-path="res://.godot/imported/props.png-c42c1e5bbfae907079570438bfada1b7.ctex"
+uid="uid://cg5jhosmuvhud"
+path="res://.godot/imported/props.png-96a55639012e472f9d5010fa5f74acc3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/green_woods/props.png"
-dest_files=["res://.godot/imported/props.png-c42c1e5bbfae907079570438bfada1b7.ctex"]
+source_file="res://assets/sprites/environment/green_woods/props.png"
+dest_files=["res://.godot/imported/props.png-96a55639012e472f9d5010fa5f74acc3.ctex"]
 
 [params]
 
