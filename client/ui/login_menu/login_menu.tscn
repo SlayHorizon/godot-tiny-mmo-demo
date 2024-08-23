@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://client/ui/login_menu/login_menu.gd" id="1_b8eob"]
 [ext_resource type="SpriteFrames" uid="uid://bqcsne8jhbmi8" path="res://common/resources/builtin/sprite_frames_collection/knight.tres" id="2_8u1v6"]
-[ext_resource type="SpriteFrames" uid="uid://dkeeft051qhl3" path="res://common/resources/builtin/sprite_frames_collection/archer.tres" id="3_xkqbx"]
-[ext_resource type="SpriteFrames" uid="uid://v5y6komavnpb" path="res://common/resources/builtin/sprite_frames_collection/mage.tres" id="4_iraby"]
+[ext_resource type="SpriteFrames" uid="uid://dkeeft051qhl3" path="res://common/resources/builtin/sprite_frames_collection/rogue.tres" id="3_xkqbx"]
+[ext_resource type="SpriteFrames" uid="uid://v5y6komavnpb" path="res://common/resources/builtin/sprite_frames_collection/wizard.tres" id="4_iraby"]
 
 [node name="LoginMenu" type="Control"]
 layout_mode = 3

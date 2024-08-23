@@ -1,8 +1,8 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://cw70ipnip703i"]
 
-[ext_resource type="Texture2D" uid="uid://wahilk4bnjts" path="res://assets/sprites/environment/dungeon_prison/Dungeon_Tiles.png" id="1_htk26"]
-[ext_resource type="Texture2D" uid="uid://doj07yaqbm630" path="res://assets/sprites/environment/dungeon_prison/props.png" id="2_ab6ml"]
-[ext_resource type="Texture2D" uid="uid://lacw3f38cat4" path="res://assets/sprites/environment/dungeon_prison/tiles.png" id="3_j87f1"]
+[ext_resource type="Texture2D" uid="uid://wahilk4bnjts" path="res://assets/sprites/environment/dungeon prison/Dungeon_Tiles.png" id="1_htk26"]
+[ext_resource type="Texture2D" uid="uid://doj07yaqbm630" path="res://assets/sprites/environment/dungeon prison/props.png" id="2_ab6ml"]
+[ext_resource type="Texture2D" uid="uid://lacw3f38cat4" path="res://assets/sprites/environment/dungeon prison/tiles.png" id="3_j87f1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gri28"]
 texture = ExtResource("1_htk26")

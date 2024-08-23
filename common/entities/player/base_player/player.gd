@@ -1,6 +1,7 @@
 class_name Player
 extends Entity
 
+# Incomplete
 var player_resource: PlayerResource
 var equiped_item: ItemResource
 
@@ -9,6 +10,12 @@ var display_name: String = "Player":
 
 var animation: String = "idle":
 	set = _set_animation
+
+var direction: Vector2 = Vector2.RIGHT:
+	set = _set_direction
+
+var sprite_frames: String = "knight":
+	set = _set_sprite_frames
 
 var is_in_pvp_zone: bool = false
 
@@ -24,6 +31,20 @@ func _set_display_name(_new_name: String) -> void:
 func _set_animation(new_animation: String) -> void:
 	animation = new_animation
 	animated_sprite.play(new_animation)
+
+func _set_direction(new_direction: Vector2) -> void:
+	direction = new_direction
+	animated_sprite.flip_h = true if new_direction.x < 0 else false
+
+func _set_sprite_frames(new_sprite_frames: String) -> void:
+	# Bad design, not scalable and optimized
+	match new_sprite_frames:
+		"knight":
+			animated_sprite.sprite_frames = load("res://common/resources/builtin/sprite_frames_collection/knight.tres")
+		"rogue":
+			animated_sprite.sprite_frames = load("res://common/resources/builtin/sprite_frames_collection/rogue.tres")
+		"wizard":
+			animated_sprite.sprite_frames = load("res://common/resources/builtin/sprite_frames_collection/wizard.tres")
 
 func _set_sync_state(new_state) -> void:
 	sync_state = new_state

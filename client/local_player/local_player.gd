@@ -39,29 +39,19 @@ func check_inputs() -> void:
 	interact_input = Input.is_action_just_pressed("interact")
 
 func update_animation() -> void:
-	#replace with look left or right based on mouse position relative to the character
-	var sprite_direction: String = "_down"
-	match last_input_direction:
-		Vector2.RIGHT:
-			sprite_direction = "_right"
-		Vector2.LEFT:
-			sprite_direction = "_left"
-		Vector2.UP:
-			sprite_direction = "_up"
-		Vector2.DOWN:
-			sprite_direction = "_down"
-	#animated_sprite.play(state + sprite_direction)
-	animation = state# + sprite_direction # disabled to fix animation issues
+	var mouse_direction := global_position.direction_to(get_global_mouse_position()).snapped(Vector2.ONE)
+	direction = mouse_direction
+	animation = state
 
 func define_sync_state() -> void:
-	# Should convert to packedbytes for optimization ?
+	# Should convert sync_state to packedbytes for optimization ?
 	sync_state = {
 		"T": Time.get_unix_time_from_system(),
 		"position": get_global_position(),
-		#"AD": anim_vector, 
+		"direction": direction,
 		"animation": animation,
 	}
-	# Should be differently ?
+	# Should fet_player_state be called differently ? Using signal ?
 	(get_parent() as InstanceClient).fetch_player_state.rpc_id(1, sync_state)
 
 func _set_sync_state(new_state) -> void:
