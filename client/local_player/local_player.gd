@@ -1,4 +1,7 @@
+class_name LocalPlayer
 extends Player
+
+signal sync_state_defined(sync_state: Dictionary)
 
 var speed: float = 75.0
 
@@ -44,8 +47,7 @@ func define_sync_state() -> void:
 		"flipped": flipped,
 		"animation": animation,
 	}
-	# Should fet_player_state be called differently ? Using signal ?
-	(get_parent() as InstanceClient).fetch_player_state.rpc_id(1, sync_state)
 
 func _set_sync_state(new_state) -> void:
 	sync_state = new_state
+	sync_state_defined.emit(new_state)
