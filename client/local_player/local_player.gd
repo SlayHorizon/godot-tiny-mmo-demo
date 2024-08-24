@@ -9,15 +9,8 @@ var interact_input: bool = false
 
 var state: String = "idle"
 
-@onready var cursor: Sprite2D = $Cursor
-
 func _ready() -> void:
 	animated_sprite.play(&"idle")
-	# Cursor animation
-	var tween: Tween = create_tween()
-	tween.set_loops()
-	tween.tween_property(cursor, ^"position:y", 1.5, 0.4).as_relative()
-	tween.tween_property(cursor, ^"position:y", -1.5, 0.4).as_relative()
 
 func _physics_process(_delta: float) -> void:
 	check_inputs()

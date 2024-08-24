@@ -22,6 +22,9 @@ func start_server() -> void:
 	
 	var server_certificate = load("res://common/server_certificate.crt")
 	var server_key = load("res://server/server_key.key")
+	if server_certificate == null or server_key == null:
+		print("Failed to load certificate or key.")
+		return
 	
 	peer.create_server(PORT, "*", TLSOptions.server(server_key, server_certificate))
 	multiplayer.set_multiplayer_peer(peer)

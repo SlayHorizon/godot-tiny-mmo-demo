@@ -1,22 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dft2w65wog56o"]
+[gd_scene load_steps=3 format=3 uid="uid://dft2w65wog56o"]
 
 [ext_resource type="PackedScene" uid="uid://6bcg7fwcl6mi" path="res://common/entities/player/base_player/player.tscn" id="1_rux1i"]
 [ext_resource type="Script" path="res://client/local_player/local_player.gd" id="2_qfdgo"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m6ppp"]
-load_path = "res://.godot/imported/green knight set sprite-sheet.png-e021f112519a42872980a9c4c95c4dcc.ctex"
-
 [node name="Player" instance=ExtResource("1_rux1i")]
 script = ExtResource("2_qfdgo")
 
-[node name="Cursor" type="Sprite2D" parent="." index="0"]
-position = Vector2(0, -35)
-texture = SubResource("CompressedTexture2D_m6ppp")
-region_enabled = true
-region_rect = Rect2(68, 41, 8, 5)
-
-[node name="AnimatedSprite2D" parent="." index="1"]
+[node name="AnimatedSprite2D" parent="." index="0"]
 frame_progress = 0.0
 
-[node name="Camera2D" type="Camera2D" parent="." index="3"]
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
 zoom = Vector2(3, 3)
