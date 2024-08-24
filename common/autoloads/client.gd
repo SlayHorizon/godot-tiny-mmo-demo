@@ -18,7 +18,7 @@ var connection_status: bool = false:
 
 var authentication_data := {"username": "Player", "class": "knight"}
 
-## For autocomplention & doc search
+## For autocomplention
 @onready var scene_multiplayer := multiplayer as SceneMultiplayer
 
 func connect_to_server():
@@ -34,6 +34,10 @@ func connect_to_server():
 	scene_multiplayer.set_auth_callback(authentication_call)
 	
 	var certificate = load("res://common/server_certificate.crt")
+	if certificate == null:
+		print("Failed to load certificate.")
+		return
+
 	peer.create_client("wss://" + ADDRESS + ":" + str(PORT), TLSOptions.client_unsafe(certificate))
 	multiplayer.set_multiplayer_peer(peer)
 
