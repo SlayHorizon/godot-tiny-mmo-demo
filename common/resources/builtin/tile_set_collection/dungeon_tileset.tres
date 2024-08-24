@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://cw70ipnip703i"]
 
-[ext_resource type="Texture2D" uid="uid://wahilk4bnjts" path="res://assets/sprites/environment/dungeon_prison/dungeon_tiles.png" id="1_mbs26"]
+[ext_resource type="Texture2D" uid="uid://wahilk4bnjts" path="res://assets/sprites/environment/dungeon_prison/Dungeon_Tiles.png" id="1_mbs26"]
 [ext_resource type="Texture2D" uid="uid://doj07yaqbm630" path="res://assets/sprites/environment/dungeon_prison/props.png" id="2_phoh5"]
 [ext_resource type="Texture2D" uid="uid://lacw3f38cat4" path="res://assets/sprites/environment/dungeon_prison/tiles.png" id="3_yhw64"]
 
@@ -778,11 +778,6 @@ texture = ExtResource("1_mbs26")
 0:4/1/terrains_peering_bit/top_left_corner = 5
 0:4/1/terrains_peering_bit/top_side = 2
 0:4/1/terrains_peering_bit/top_right_corner = 2
-0:4/3 = 3
-0:4/4 = 4
-0:4/5 = 5
-0:4/6 = 6
-0:4/7 = 7
 1:4/0 = 0
 1:4/0/terrain_set = 0
 1:4/0/terrain = 2
@@ -1187,6 +1182,10 @@ texture = ExtResource("1_mbs26")
 3:4/0/terrains_peering_bit/top_left_corner = 5
 3:4/0/terrains_peering_bit/top_side = 1
 3:4/0/terrains_peering_bit/top_right_corner = 5
+19:7/0 = 0
+19:8/0 = 0
+19:9/0 = 0
+22:9/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_saoip"]
 texture = ExtResource("2_phoh5")
