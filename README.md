@@ -19,7 +19,10 @@ The list below indicates the current progress and goals:
 - [ ] **Private instance for individual players or groups.**
 - [ ] **Mobs hosted and managed by the server.**
 - [ ] **Basic combat system with PvE and PvP.**
-- [ ] **Experience and leveling.**
+- [ ] **Experience and leveling systems.**
+- [ ] **Entity interpolation (rubber banding).**
+- [ ] **Server clock.**
+- [ ] **Instance based chat.**
  
 And maybe more later.
 
