@@ -42,17 +42,12 @@ func get_all_file_paths(path: String) -> Array[String]:
 
 @rpc("authority", "call_remote", "reliable", 0)
 func request_change_instance(new_instance: Dictionary) -> void:
-	if instance == null or instance.name != new_instance["instance_name"]:
-		if instance:
-			instance.queue_free()
-			
-		instance = InstanceClient.new()
-		add_child(instance)
-		instance.name = new_instance["instance_name"]
-		print("Loading new map: %s." % new_instance["map_path"])
-		var map: Node2D = load(new_instance["map_path"]).instantiate()
-		map.ready.connect(instance.ready_to_enter_instance, new_instance["spawn_id"])
-		instance.add_child(map)
-	else:
-		pass #code here to not refresh instance
-		#instance.ready_to_move(new_instance["spawn_id"])
+	if instance:
+		instance.queue_free()
+	instance = InstanceClient.new()
+	add_child(instance)
+	instance.name = new_instance["instance_name"]
+	print("Loading new map: %s." % new_instance["map_path"])
+	var map: Node2D = load(new_instance["map_path"]).instantiate()
+	map.ready.connect(instance.ready_to_enter_instance)
+	instance.add_child(map)
