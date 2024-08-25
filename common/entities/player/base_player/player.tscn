@@ -7,16 +7,18 @@
 size = Vector2(14, 6)
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 texture_filter = 1
 collision_mask = 6
 script = ExtResource("1_gnfj5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -32)
+position = Vector2(0, -2)
 sprite_frames = ExtResource("2_es1sn")
 animation = &"run"
 frame_progress = 0.376861
 speed_scale = 1.5
+offset = Vector2(0, -30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)

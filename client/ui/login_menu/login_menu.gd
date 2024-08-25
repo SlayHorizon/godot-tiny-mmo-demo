@@ -2,10 +2,11 @@ extends Control
 
 var player_class: String = "knight"
 
+@export var container : HBoxContainer
 
 func _ready() -> void:
 	Client.connection_changed.connect(self._on_connection_changed)
-	for button: Button in $VBoxContainer/HBoxContainer.get_children():
+	for button: Button in container.get_children():
 		button.pivot_offset = button.size / 2
 		button.mouse_entered.connect(func():
 			var tween := create_tween()
