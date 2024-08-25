@@ -13,12 +13,12 @@ func start_server() -> void:
 	print("Starting server.")
 	peer = WebSocketMultiplayerPeer.new()
 	
-	multiplayer.peer_connected.connect(self._peer_connected)
-	multiplayer.peer_disconnected.connect(self._peer_disconnected)
+	multiplayer.peer_connected.connect(self._on_peer_connected)
+	multiplayer.peer_disconnected.connect(self._on_peer_disconnected)
 	
-	scene_multiplayer.peer_authenticating.connect(self._peer_authenticating)
-	scene_multiplayer.peer_authentication_failed.connect(self._peer_authentication_failed)
-	scene_multiplayer.set_auth_callback(self._on_peer_auth)
+	scene_multiplayer.peer_authenticating.connect(self._on_peer_authenticating)
+	scene_multiplayer.peer_authentication_failed.connect(self._on_peer_authentication_failed)
+	scene_multiplayer.set_auth_callback(self.authentication_call)
 	
 	var server_certificate = load("res://common/server_certificate.crt")
 	var server_key = load("res://server/server_key.key")
@@ -29,23 +29,23 @@ func start_server() -> void:
 	peer.create_server(PORT, "*", TLSOptions.server(server_key, server_certificate))
 	multiplayer.set_multiplayer_peer(peer)
 
-func _peer_connected(peer_id) -> void:
+func _on_peer_connected(peer_id) -> void:
 	print("Peer: %d is connected." % peer_id)
 	get_node("/root/Main/MainInstance").enter_instance(peer_id)
 
-func _peer_disconnected(peer_id) -> void:
+func _on_peer_disconnected(peer_id) -> void:
 	print("Peer: %d is disconnected." % peer_id)
 	player_list.erase(peer_id)
 
-func _peer_authenticating(peer_id: int) -> void:
+func _on_peer_authenticating(peer_id: int) -> void:
 	print("Peer: %d is trying to authenticate." % peer_id)
 	scene_multiplayer.send_auth(peer_id, "data_from_server".to_ascii_buffer())
 
-func _peer_authentication_failed(peer_id: int) -> void:
+func _on_peer_authentication_failed(peer_id: int) -> void:
 	print("Peer: %d failed to authenticate." % peer_id)
 
 # Quick and dirty. It needs serious rework.
-func _on_peer_auth(peer_id: int, data: PackedByteArray) -> void:
+func authentication_call(peer_id: int, data: PackedByteArray) -> void:
 	var dict := bytes_to_var(data) as Dictionary
 	print("Peer: %d is trying to connect with data: \"%s\"." % [peer_id, dict])
 	if is_valid_authentication_data(dict):

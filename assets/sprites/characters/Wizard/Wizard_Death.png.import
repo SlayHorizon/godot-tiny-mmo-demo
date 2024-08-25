@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgla5dm5us5xw"
-path="res://.godot/imported/wizard_death.png-b2cdf057b9af4c2870e3f88bd103e723.ctex"
+path="res://.godot/imported/Wizard_Death.png-90c9efb358fcd7f6b9bb92f3717e6fa5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/characters/wizard/wizard_death.png"
-dest_files=["res://.godot/imported/wizard_death.png-b2cdf057b9af4c2870e3f88bd103e723.ctex"]
+source_file="res://assets/sprites/characters/Wizard/Wizard_Death.png"
+dest_files=["res://.godot/imported/Wizard_Death.png-90c9efb358fcd7f6b9bb92f3717e6fa5.ctex"]
 
 [params]
 
