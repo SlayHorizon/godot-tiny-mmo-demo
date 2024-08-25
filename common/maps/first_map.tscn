@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=4 uid="uid://sscb58nigni8"]
+[gd_scene load_steps=10 format=4 uid="uid://sscb58nigni8"]
 
-[ext_resource type="Script" path="res://common/maps/spawn_point.gd" id="1_13n8u"]
+[ext_resource type="Script" path="res://common/maps/map_components/spawn_point.gd" id="1_13n8u"]
 [ext_resource type="TileSet" uid="uid://cw70ipnip703i" path="res://common/resources/builtin/tile_set_collection/dungeon_tileset.tres" id="2_c4reb"]
 [ext_resource type="PackedScene" uid="uid://digkg4swbl27x" path="res://client/map_objects/collectibles/coin.tscn" id="3_ef1ij"]
 [ext_resource type="PackedScene" uid="uid://hcfiu2vpqr3u" path="res://client/map_objects/doors/activable_door/activable_door.tscn" id="4_0lkki"]
 [ext_resource type="PackedScene" uid="uid://bojii5hxh2lgh" path="res://client/map_objects/ground_button/ground_button.tscn" id="5_mlcfb"]
-[ext_resource type="PackedScene" uid="uid://b2ckixon7ryh6" path="res://common/maps/map_components/warper.tscn" id="6_dfiuk"]
+[ext_resource type="PackedScene" uid="uid://b2ckixon7ryh6" path="res://common/maps/map_components/warper/warper.tscn" id="6_dfiuk"]
+[ext_resource type="PackedScene" uid="uid://dbg8y8if4vv5p" path="res://common/maps/map_components/teleporter/teleporter.tscn" id="7_mnpu2"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_i8exw"]
 resource_name = "coins"
@@ -57,34 +58,10 @@ position = Vector2(312, -19)
 scale = Vector2(2.37041, 0.841242)
 target_instance_name = &"AnotherInstance"
 
-[connection signal="body_entered" from="Props/Coin" to="Props/Coin" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204678" to="Props/@Area2D@204678" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204679" to="Props/@Area2D@204679" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204680" to="Props/@Area2D@204680" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204681" to="Props/@Area2D@204681" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204684" to="Props/@Area2D@204684" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204685" to="Props/@Area2D@204685" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204686" to="Props/@Area2D@204686" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204687" to="Props/@Area2D@204687" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204688" to="Props/@Area2D@204688" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204689" to="Props/@Area2D@204689" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204690" to="Props/@Area2D@204690" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204691" to="Props/@Area2D@204691" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204692" to="Props/@Area2D@204692" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204693" to="Props/@Area2D@204693" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204694" to="Props/@Area2D@204694" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204695" to="Props/@Area2D@204695" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204696" to="Props/@Area2D@204696" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204697" to="Props/@Area2D@204697" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204698" to="Props/@Area2D@204698" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204699" to="Props/@Area2D@204699" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204700" to="Props/@Area2D@204700" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204701" to="Props/@Area2D@204701" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204702" to="Props/@Area2D@204702" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204703" to="Props/@Area2D@204703" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204704" to="Props/@Area2D@204704" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204705" to="Props/@Area2D@204705" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204706" to="Props/@Area2D@204706" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204707" to="Props/@Area2D@204707" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/@Area2D@204708" to="Props/@Area2D@204708" method="_on_body_entered"]
-[connection signal="body_entered" from="Props/GroundButton" to="Props/GroundButton" method="_on_body_entered"]
+[node name="Teleporter" parent="." node_paths=PackedStringArray("target") instance=ExtResource("7_mnpu2")]
+position = Vector2(276, 54)
+target = NodePath("../Teleporter2")
+
+[node name="Teleporter2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("7_mnpu2")]
+position = Vector2(346, 53)
+target = NodePath("../Teleporter")

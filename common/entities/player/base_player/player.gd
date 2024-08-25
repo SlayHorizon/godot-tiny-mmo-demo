@@ -18,6 +18,7 @@ var sprite_frames: String = "knight":
 	set = _set_sprite_frames
 
 var is_in_pvp_zone: bool = false
+var just_teleported: bool = false
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 

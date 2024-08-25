@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wahilk4bnjts"
-path="res://.godot/imported/dungeon_tiles.png-6f865654d46e22f9ffb48d8a64e79ee1.ctex"
+path="res://.godot/imported/Dungeon_Tiles.png-3b0151d6f609114a5a07118f187e5ead.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/environment/dungeon_prison/dungeon_tiles.png"
-dest_files=["res://.godot/imported/dungeon_tiles.png-6f865654d46e22f9ffb48d8a64e79ee1.ctex"]
+source_file="res://assets/sprites/environment/dungeon_prison/Dungeon_Tiles.png"
+dest_files=["res://.godot/imported/Dungeon_Tiles.png-3b0151d6f609114a5a07118f187e5ead.ctex"]
 
 [params]
 

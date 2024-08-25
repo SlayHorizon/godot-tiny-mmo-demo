@@ -28,8 +28,26 @@ func load_map(map_scene: PackedScene) -> void:
 	var map = map_scene.instantiate()
 	add_child(map)
 	for child in map.get_children():
-		if child is Warper:
-			child.player_trying_to_exit.connect(self.change_instance)
+		if child is InteractionArea:
+			child.player_entered_interaction_area.connect(_on_player_entered_interaction_area)
+
+func _on_player_entered_interaction_area(player: Player, interaction_area: InteractionArea) -> void:
+	if interaction_area is Warper:
+		interaction_area = interaction_area as Warper
+		change_instance(player, interaction_area.target_instance_name)
+	if interaction_area is Teleporter:
+		if not player.just_teleported:
+			player.just_teleported = true
+			update_entity(player, {"position": interaction_area.target.global_position})
+			await get_tree().create_timer(0.3).timeout
+			player.just_teleported = false
+
+@rpc("authority", "call_remote", "reliable", 1)
+func update_entity(entity, to_update: Dictionary) -> void:
+	for thing: String in to_update:
+		entity.set_indexed(thing, to_update[thing])
+	for peer_id: int in connected_peers:
+		update_entity.rpc_id(peer_id, entity.name.to_int(), to_update)
 
 @rpc("authority", "call_remote", "unreliable", 0)
 func fetch_instance_state(_new_state: Dictionary):
