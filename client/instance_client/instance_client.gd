@@ -25,10 +25,6 @@ func spawn_player(player_id: int, spawn_state: Dictionary) -> void:
 	var new_player: Player
 	if player_id == Client.peer_id:
 		new_player = LOCAL_PLAYER.instantiate()
-		(new_player as LocalPlayer).sync_state_defined.connect(
-			func(sync_state: Dictionary):
-				fetch_player_state.rpc_id(1, sync_state)
-		)
 	else:
 		new_player = DUMMY_PLAYER.instantiate()
 	new_player.name = str(player_id)
