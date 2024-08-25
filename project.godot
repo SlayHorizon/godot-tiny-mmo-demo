@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 ClientEvents="*res://common/autoloads/client_events.gd"
 Client="*res://common/autoloads/client.gd"
 Server="*res://common/autoloads/server.gd"
+DevTool="*res://common/autoloads/dev_tool.gd"
 
 [debug]
 
