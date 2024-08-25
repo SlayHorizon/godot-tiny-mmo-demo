@@ -45,23 +45,27 @@ func fetch_player_state(sync_state: Dictionary) -> void:
 
 @rpc("authority", "call_remote", "reliable", 0)
 func spawn_player(player_id: int, spawn_state: Dictionary = {}) -> void:
+	if spawn_state["spawn_id"] != null:
+		for obj in get_child(0).get_children():
+			if obj is spawn_point:
+				if obj.id == spawn_state["spawn_id"]:
+					spawn_state["position"] = obj.global_position
+	
+	spawn_state["sprite_frames"] = Server.player_list[player_id]["class"]
+	
 	var new_player: Player = PLAYER.instantiate() as Player
-	var spawn_position := Vector2.ZERO
-	if get_child(0).has_node("SpawnPoint"):
-		spawn_position = get_child(0).get_node("SpawnPoint").global_position
-	spawn_state = {
-		"position": spawn_position,
-		"sprite_frames": Server.player_list[player_id]["class"]
-	}
 	new_player.name = str(player_id)
 	new_player.spawn_state = spawn_state
+	
 	add_child(new_player, true)
+	
 	entity_collection[player_id] = new_player
 	connected_peers.append(player_id)
 	# Spawn the new player on all other client in the current instance
 	# and spawn all other players on the new client.
 	for peer_id: int in connected_peers:
 		spawn_player.rpc_id(peer_id, player_id, new_player.spawn_state)
+			
 		if player_id != peer_id:
 			spawn_player.rpc_id(player_id, peer_id, entity_collection[peer_id].spawn_state)
 
@@ -74,27 +78,32 @@ func despawn_player(player_id: int) -> void:
 	for peer_id: int in connected_peers:
 		despawn_player.rpc_id(peer_id, player_id)
 
-func enter_instance(peer_id: int) -> void:
+func enter_instance(peer_id: int, spawn_id: int = 0) -> void:
 	var instance_data: Dictionary = {
 		"instance_name": instance_resource.instance_name,
-		"map_path": instance_resource.map.resource_path
+		"map_path": instance_resource.map.resource_path,
+		"spawn_id": spawn_id
 		}
 	get_parent().request_change_instance.rpc_id(peer_id, instance_data)
 
-func change_instance(player: Player, instance_name: StringName) -> void:
+func change_instance(player: Player, instance_name: StringName, spawn_id: int = 0) -> void:
 	var player_id: int = player.name.to_int()
 	if connected_peers.has(player_id):
 		despawn_player(player_id)
+		
 	var target_instance: InstanceResource = Server.get_instance_resource_from_name(instance_name)
 	if not target_instance: return;
 	get_parent().request_change_instance.rpc_id(player_id, 
 		{
 		"instance_name": target_instance.instance_name,
-		"map_path": target_instance.map.resource_path
+		"map_path": target_instance.map.resource_path,
+		"spawn_id": spawn_id
 		}
 	)
 
 @rpc("any_peer", "call_remote", "reliable", 0)
-func ready_to_enter_instance() -> void:
+func ready_to_enter_instance(spawn_id: int = 0) -> void:
 	var peer_id: int = multiplayer.get_remote_sender_id()
-	spawn_player(peer_id)
+	spawn_player(peer_id, {
+		"spawn_id": spawn_id
+	})

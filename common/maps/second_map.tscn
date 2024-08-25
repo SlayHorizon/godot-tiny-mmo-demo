@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=4 uid="uid://5ke1s1ydu7ty"]
+[gd_scene load_steps=4 format=4 uid="uid://5ke1s1ydu7ty"]
 
 [ext_resource type="TileSet" uid="uid://cw70ipnip703i" path="res://common/resources/builtin/tile_set_collection/dungeon_tileset.tres" id="1_mdlle"]
+[ext_resource type="Script" path="res://common/maps/spawn_point.gd" id="2_7e438"]
 [ext_resource type="PackedScene" uid="uid://b2ckixon7ryh6" path="res://common/maps/map_components/warper.tscn" id="6_0mhht"]
 
 [node name="SecondMap" type="Node2D"]
@@ -23,7 +24,8 @@ tile_map_data = PackedByteArray("AAD6/wYAAAADAAAAAAD6/wUAAAAEAAIAAAD6/wQAAAAEAAE
 tile_set = ExtResource("1_mdlle")
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
+script = ExtResource("2_7e438")
 
 [node name="Warper" parent="." instance=ExtResource("6_0mhht")]
 position = Vector2(0, -100)
-target_instance_name = &"MainInstance"
+target_instance_name = &"Tutorial"

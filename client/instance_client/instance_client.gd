@@ -33,7 +33,7 @@ func spawn_player(player_id: int, spawn_state: Dictionary) -> void:
 	entity_collection[player_id] = new_player
 	
 	add_child(new_player)
-
+	
 @rpc("authority", "call_remote", "reliable", 0)
 func despawn_player(player_id: int) -> void:
 	if entity_collection.has(player_id):
@@ -47,5 +47,5 @@ func update_entity_collection(collection_state: Dictionary) -> void:
 			(entity_collection[entity_id] as Entity).sync_state = collection_state[entity_id]
 
 @rpc("any_peer", "call_remote", "reliable", 0)
-func ready_to_enter_instance() -> void:
-	ready_to_enter_instance.rpc_id(1)
+func ready_to_enter_instance(spawn_id: int = 0) -> void:
+	ready_to_enter_instance.rpc_id(1, spawn_id)
