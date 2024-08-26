@@ -22,16 +22,24 @@ func _get_args(param : String) -> Array:
 			
 	return args
 
+@rpc("any_peer", "call_remote", "reliable", 0)
+func filter_cmd(cmd : String, args : Array) -> void:
+	pass
+
 var cmds : Dictionary = {
 	"tp" : func(param : String):
 		var args : = _get_args(param)
 		if args.size() < 2:
 			return
-			
-		var x : float = float(args[0])
-		var y : float = float(args[1])
 		
-		print(x, y)
+		get_tree().root.get_node("Main").filter_cmd.rpc_id(1, "tp", args)
+		pass,
+	"warp" : func(param : String):
+		var args : = _get_args(param)
+		if args.size() < 1:
+			return
+		
+		get_tree().root.get_node("Main").filter_cmd.rpc_id(1, "warp", args)
 		pass;
 }
 
