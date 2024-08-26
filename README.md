@@ -26,7 +26,6 @@ The list below indicates the current progress and goals:
  
 And maybe more later.
 
-
 See the [open issues](https://github.com/SlayHorizon/godot-tiny-mmo-template/issues) for a full list of proposed features (and known issues).  
 
 ## Getting Started
@@ -41,8 +40,6 @@ To get started with the project:
 
 Example with 17 instances:
 ![M M O A R P G (V 000 007) Godot-Tiny-MMO-Template-0 0 3 Godot 4 3 NET+ Dungeon Gathering Online (1)(Frontpage Github Contributor)](https://github.com/user-attachments/assets/5ca8d95d-c78b-4027-8c23-77d4e987b4ef)
-
-
 
 ## Contributing
 
