@@ -62,11 +62,15 @@ var cmds : Dictionary = {
 	"tp" : func(param : Array, peer_id : int):
 		var plr := get_plr(peer_id)
 		var instance := get_instance_by_plr(peer_id)
+		if not plr or not instance:
+			return
 		instance.update_entity(plr, {"position": Vector2(float(param[0]), float(param[1]))})
 		pass,
 	"warp" : func(param : Array, peer_id : int):
 		var plr := get_plr(peer_id)
 		var instance := get_instance_by_plr(peer_id)
+		if not plr or not instance:
+			return
 		instance.change_instance(plr, param[0])
 		pass;
 }
