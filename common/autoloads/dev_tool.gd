@@ -94,7 +94,7 @@ func _process(_delta : float) -> void:
 		key_debounce = false
 		
 func get_main() -> Node:
-	return get_tree().root.get_node("Main")
+	return get_tree().root.get_node("InstanceManager")
 
 func get_plr(peer_id) -> Player:
 	for ins in get_main().get_children():
