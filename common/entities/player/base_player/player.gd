@@ -26,6 +26,7 @@ func _init() -> void:
 	sync_state = {"T" = 0.0}
 	group = Group.PLAYER
 
+
 func _set_display_name(_new_name: String) -> void:
 	pass
 
@@ -38,7 +39,7 @@ func _set_flip(new_flip: bool) -> void:
 	animated_sprite.flip_h = flipped
 
 func _set_sprite_frames(new_sprite_frames: String) -> void:
-	# Bad design, not scalable and optimized
+	# Bad design, not scalable and optimized.
 	match new_sprite_frames:
 		"knight":
 			animated_sprite.sprite_frames = load("res://common/resources/builtin/sprite_frames_collection/knight.tres")

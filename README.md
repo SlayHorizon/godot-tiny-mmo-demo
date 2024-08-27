@@ -1,8 +1,12 @@
  # Godot Tiny MMO Demo
 
 A minimalistic MMO demo built using the Godot Engine 4.3.  
+Feel free to take a look at my ![Wiki](https://github.com/SlayHorizon/godot-tiny-mmo-demo/wiki) to better understand the project.
 
+Old screenshot showing 16 clients at the same time on multiple different instances:  
 ![M.M.O.A.R.P.G. (V.000.007) Godot-Tiny-MMO-Template-0.0.3 Godot 4.3 NET+ Dungeon Gathering Online (0)(Frontpage Github Contributor)(Image showing the early state of the project)](https://github.com/user-attachments/assets/017df4d6-a6fa-465c-a9ea-d74cf1c27393)
+Login menu:  
+![login-menu-screenshot](https://github.com/user-attachments/assets/3d47c8e1-ace1-4452-83b5-a4d73584fdc4)
 
 ## Project Goals / To-Do List
 
@@ -12,7 +16,6 @@ The list below indicates the current progress and goals:
 - [ ] **Client side working on web browser.**
 - [X] **Authentication steps before connecting.**
 - [x] **Login UI to authenticate.**
-- [x] **Player character customization.**
 - [X] **Synchronizing entities among the players in the same instance.**
 - [X] **Hosting different map instances on a single server and allowing traveling between them.**
 - [ ] **Basic RPG class system with 3 classes to get started with: Knight, Rogue, Wizard.**
@@ -26,7 +29,6 @@ The list below indicates the current progress and goals:
  
 And maybe more later.
 
-
 See the [open issues](https://github.com/SlayHorizon/godot-tiny-mmo-template/issues) for a full list of proposed features (and known issues).  
 
 ## Getting Started
@@ -39,10 +41,8 @@ To get started with the project:
 5. Under feature tags, be sure to have only 1 "server" tag and at least 1 or more "client" tag.
 6. Play the project.
 
-Example with 17 instances:
-![M M O A R P G (V 000 007) Godot-Tiny-MMO-Template-0 0 3 Godot 4 3 NET+ Dungeon Gathering Online (1)(Frontpage Github Contributor)](https://github.com/user-attachments/assets/5ca8d95d-c78b-4027-8c23-77d4e987b4ef)
-
-
+Example:  
+![multiple-instances-screenshot](https://github.com/user-attachments/assets/07b0b609-3712-4e3d-bbe0-f5151ddfe8a6)
 
 ## Contributing
 
