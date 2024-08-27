@@ -2,7 +2,6 @@
 @icon("res://assets/node_icons/blue/icon_flag.png")
 extends InteractionArea
 class_name Teleporter
-
 ## Used to teleport from a point A to a point B inside the same instance.
 ## To change instance, use a Warper instead.
 

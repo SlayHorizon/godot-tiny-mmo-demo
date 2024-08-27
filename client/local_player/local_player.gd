@@ -21,6 +21,7 @@ func _physics_process(_delta: float) -> void:
 	update_animation()
 	define_sync_state()
 
+
 func move() -> void:
 	velocity = input_direction * speed
 	state = "run" if velocity else "idle"

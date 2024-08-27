@@ -25,6 +25,7 @@ func _ready() -> void:
 			player_class = (button.get_node("Label") as Label).text.to_lower()
 		)
 
+
 func _on_connection_changed(connection_status: bool) -> void:
 	if connection_status:
 		%ServerStatusLabel.text = "Connected to the server!"
