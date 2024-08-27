@@ -40,47 +40,6 @@ func get_all_file_paths(path: String) -> Array[String]:
 		file_name = dir.get_next()  
 	return file_paths
 
-func get_plr(peer_id) -> Player:
-	for ins in get_children():
-		for plr in ins.get_children():
-			if plr is CharacterBody2D:
-				if plr.name == str(peer_id):
-					return plr
-					
-	return null
-	
-func get_instance_by_plr(peer_id) -> Player:
-	for ins in get_children():
-		for plr in ins.get_children():
-			if plr is CharacterBody2D:
-				if plr.name == str(peer_id):
-					return ins
-					
-	return null
-
-var cmds : Dictionary = {
-	"tp" : func(param : Array, peer_id : int):
-		var plr := get_plr(peer_id)
-		var instance := get_instance_by_plr(peer_id)
-		if not plr or not instance:
-			return
-		instance.update_entity(plr, {"position": Vector2(float(param[0]), float(param[1]))})
-		pass,
-	"warp" : func(param : Array, peer_id : int):
-		var plr := get_plr(peer_id)
-		var instance := get_instance_by_plr(peer_id)
-		if not plr or not instance:
-			return
-		instance.change_instance(plr, param[0])
-		pass;
-}
-
-@rpc("any_peer", "call_remote", "reliable", 1)
-func filter_cmd(cmd : String, args : Array) -> void:
-	var peerid := multiplayer.get_remote_sender_id()
-	# add checks here for admin only
-	cmds[cmd].call(args, peerid)
-
 @rpc("authority", "call_remote", "reliable", 0)
 func request_change_instance(new_instance: Dictionary) -> void:
 	if instance:
