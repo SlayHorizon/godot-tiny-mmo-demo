@@ -1,6 +1,7 @@
  # Godot Tiny MMO Demo
 
 A minimalistic MMO demo built using the Godot Engine 4.3.  
+Feel free to take a look at my ![Wiki](https://github.com/SlayHorizon/godot-tiny-mmo-demo/wiki) to better understand the project.
 
 Old screenshot showing 16 clients at the same time on multiple different instances:  
 ![M.M.O.A.R.P.G. (V.000.007) Godot-Tiny-MMO-Template-0.0.3 Godot 4.3 NET+ Dungeon Gathering Online (0)(Frontpage Github Contributor)(Image showing the early state of the project)](https://github.com/user-attachments/assets/017df4d6-a6fa-465c-a9ea-d74cf1c27393)
