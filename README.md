@@ -16,7 +16,6 @@ The list below indicates the current progress and goals:
 - [ ] **Client side working on web browser.**
 - [X] **Authentication steps before connecting.**
 - [x] **Login UI to authenticate.**
-- [x] **Player character customization.**
 - [X] **Synchronizing entities among the players in the same instance.**
 - [X] **Hosting different map instances on a single server and allowing traveling between them.**
 - [ ] **Basic RPG class system with 3 classes to get started with: Knight, Rogue, Wizard.**
