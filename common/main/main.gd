@@ -78,6 +78,7 @@ var cmds : Dictionary = {
 @rpc("any_peer", "call_remote", "reliable", 1)
 func filter_cmd(cmd : String, args : Array) -> void:
 	var peerid := multiplayer.get_remote_sender_id()
+	# add checks here for admin only
 	cmds[cmd].call(args, peerid)
 
 @rpc("authority", "call_remote", "reliable", 0)
