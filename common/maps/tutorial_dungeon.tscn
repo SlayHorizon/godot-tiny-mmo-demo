@@ -44,7 +44,7 @@ position = Vector2(557.139, 118.223)
 script = ExtResource("2_x4mx2")
 
 [node name="Teleporter" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_3clf3")]
-position = Vector2(576, 96)
+position = Vector2(576, 108)
 one_way = true
 target = NodePath("../Teleporter2")
 

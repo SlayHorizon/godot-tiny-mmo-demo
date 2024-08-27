@@ -16,8 +16,6 @@ grow_vertical = 2
 script = ExtResource("1_b8eob")
 container = NodePath("CanvasLayer/VBoxContainer/HBoxContainer")
 
-[node name="TutorialDungeon" parent="." instance=ExtResource("2_w18df")]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
@@ -172,5 +170,7 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Login"
+
+[node name="TutorialDungeon" parent="." instance=ExtResource("2_w18df")]
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/LoginButton" to="." method="_on_login_button_pressed"]

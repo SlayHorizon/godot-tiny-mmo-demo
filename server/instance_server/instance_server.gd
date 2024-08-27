@@ -1,6 +1,8 @@
 class_name ServerInstance
 extends SubViewport
 
+signal player_entered_warper(peer_id: int, current_instance: ServerInstance, target_instance: StringName)
+
 const PLAYER = preload("res://common/entities/player/base_player/player.tscn")
 
 var entity_collection: Dictionary = {}
@@ -34,7 +36,8 @@ func load_map(map_scene: PackedScene) -> void:
 func _on_player_entered_interaction_area(player: Player, interaction_area: InteractionArea) -> void:
 	if interaction_area is Warper:
 		interaction_area = interaction_area as Warper
-		change_instance(player, interaction_area.target_instance_name)
+		player_entered_warper.emit(player.name.to_int(), self, interaction_area.target_instance_name)
+		#change_instance(player, interaction_area.target_instance_name)
 	if interaction_area is Teleporter:
 		if not player.just_teleported:
 			player.just_teleported = true
@@ -91,13 +94,6 @@ func despawn_player(player_id: int) -> void:
 		entity_collection.erase(player_id)
 	for peer_id: int in connected_peers:
 		despawn_player.rpc_id(peer_id, player_id)
-
-func enter_instance(peer_id: int) -> void:
-	var instance_data: Dictionary = {
-		"instance_name": instance_resource.instance_name,
-		"map_path": instance_resource.map.resource_path
-		}
-	get_parent().request_change_instance.rpc_id(peer_id, instance_data)
 
 func change_instance(player: Player, instance_name: StringName) -> void:
 	var player_id: int = player.name.to_int()

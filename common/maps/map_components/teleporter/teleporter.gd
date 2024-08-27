@@ -3,6 +3,9 @@
 extends InteractionArea
 class_name Teleporter
 
+## Used to teleport from a point A to a point B inside the same instance.
+## To change instance, use a Warper instead.
+
 @export var one_way: bool = false
 @export var target: Teleporter:
 	set(value):

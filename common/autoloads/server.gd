@@ -1,9 +1,10 @@
 extends Node
+## Server autoload. Keep it clean and minimal.
+## Should only care about connection and authentication stuff.
 
 const PORT: int = 8087
 
 var peer: WebSocketMultiplayerPeer
-var instance_collection: Array[InstanceResource]
 
 var player_list: Dictionary
 
@@ -31,7 +32,6 @@ func start_server() -> void:
 
 func _on_peer_connected(peer_id) -> void:
 	print("Peer: %d is connected." % peer_id)
-	get_node("/root/Main/MainInstance").enter_instance(peer_id)
 
 func _on_peer_disconnected(peer_id) -> void:
 	print("Peer: %d is disconnected." % peer_id)
@@ -67,9 +67,3 @@ func is_valid_authentication_data(data: Dictionary) -> bool:
 	elif not player_class in ["knight", "rogue", "wizard"]:
 		return false
 	return true
-
-func get_instance_resource_from_name(instance_name) -> InstanceResource:
-	for instance_resource in instance_collection:
-		if instance_resource.instance_name == instance_name:
-			return instance_resource
-	return null

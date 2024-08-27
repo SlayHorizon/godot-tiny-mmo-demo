@@ -2,6 +2,8 @@
 class_name InteractionArea
 extends Area2D
 
+## Base class of all interactible areas. Can be a collectible, a warper, a teleporter etc.
+
 signal player_entered_interaction_area(player: Player, interaction_area: InteractionArea)
 
 func _init() -> void:

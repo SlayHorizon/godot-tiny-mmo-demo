@@ -1,4 +1,6 @@
 extends Node
+## Client autoload. Keep it clean and minimal.
+## Should only care about connection and authentication stuff.
 
 signal connection_changed(new_connection_status: bool)
 signal authentication_requested
@@ -54,8 +56,9 @@ func close_connection():
 func _on_connection_succeeded() -> void:
 	print("Succesfuly connected to the server as %d!" % multiplayer.get_unique_id())
 	peer_id = multiplayer.get_unique_id()
-	DisplayServer.window_set_title("Client - %d" % peer_id)
 	connection_status = true
+	if OS.has_feature("debug"):
+		DisplayServer.window_set_title("Client - %d" % peer_id)
 
 func _on_connection_failed() -> void:
 	print("Failed to connect to the server.")
@@ -75,6 +78,5 @@ func _on_peer_authentication_failed(_peer_id: int) -> void:
 
 func authentication_call(_peer_id: int, data: PackedByteArray):
 	print("Authentification call from server with data: \"%s\"." % data.get_string_from_ascii())
-	#scene_multiplayer.send_auth(1, PackedByteArray("test_data_from_client".to_utf8_buffer()))
 	scene_multiplayer.send_auth(1, var_to_bytes(authentication_data))
 	scene_multiplayer.complete_auth(1)
