@@ -22,26 +22,17 @@ func _get_args(param : String) -> Array:
 			
 	return args
 
-@rpc("any_peer", "call_remote", "reliable", 0)
-func filter_cmd(cmd : String, args : Array) -> void:
-	pass
-
-var cmds : Dictionary = {
-	"tp" : func(param : String):
-		var args : = _get_args(param)
-		if args.size() < 2:
-			return
+func _apply_cmd(cmd : String) -> void:
+	_send_messages(cmd)
+	
+	var id : int = cmd.find(" ")
+	if id != -1:
+		var iscmd : String = cmd.left(id)
+		if cmds.has(iscmd):
+			filter_cmd.rpc_id(1, iscmd, _get_args(cmd.erase(0, iscmd.length() + 1)))
+			#cmds[iscmd].call( cmd.erase(0, iscmd.length() + 1) )
 		
-		do_filter_cmd.rpc_id(1, "tp", args)
-		pass,
-	"warp" : func(param : String):
-		var args : = _get_args(param)
-		if args.size() < 1:
-			return
-		
-		do_filter_cmd.rpc_id(1, "warp", args)
-		pass;
-}
+	cmd_box.text = ""
 
 func is_client() -> bool:
 	return OS.has_feature("client")
@@ -56,17 +47,6 @@ func _ready() -> void:
 	msg_container = new_menu.get_node("DevHud/VBoxContainer")
 	cmd_box = new_menu.get_node("DevHud/LineEdit")
 	cmd_box.text_submitted.connect(_apply_cmd)
-
-func _apply_cmd(cmd : String) -> void:
-	_send_messages(cmd)
-	
-	var id : int = cmd.find(" ")
-	if id != -1:
-		var iscmd : String = cmd.left(id)
-		if cmds.has(iscmd):
-			cmds[iscmd].call( cmd.erase(0, iscmd.length() + 1) )
-		
-	cmd_box.text = ""
 
 var messages := []
 func _send_messages(msg : String = "") -> void:
@@ -114,25 +94,33 @@ func get_instance_by_plr(peer_id) -> Player:
 					
 	return null
 
-var do_cmds : Dictionary = {
-	"tp" : func(param : Array, peer_id : int):
-		var plr := get_plr(peer_id)
-		var instance := get_instance_by_plr(peer_id)
-		if not plr or not instance:
+var cmds : Dictionary = {
+	"tp" : func(param : Array, info : Dictionary):
+		if not info[1] or not info[2]:
 			return
-		instance.update_entity(plr, {"position": Vector2(float(param[0]), float(param[1]))})
+		info[2].update_entity(info[1], {"position": Vector2(float(param[0]), float(param[1]))})
 		pass,
-	"warp" : func(param : Array, peer_id : int):
-		var plr := get_plr(peer_id)
-		var instance := get_instance_by_plr(peer_id)
-		if not plr or not instance:
+	"warp" : func(param : Array, info : Dictionary):
+		if not info[1] or not info[2]:
 			return
-		instance.change_instance(plr, param[0])
+		
+		var target_instance: InstanceResource = get_main().get_instance_resource_from_name(param[0])
+		get_main().charge_new_instance.rpc_id(info[0], {
+			"instance_name": target_instance.instance_name,
+			"map_path": target_instance.map.resource_path
+		})
 		pass;
 }
 
 @rpc("any_peer", "call_remote", "reliable", 1)
-func do_filter_cmd(cmd : String, args : Array) -> void:
-	var peerid := multiplayer.get_remote_sender_id()
+func filter_cmd(cmd : String, args : Array) -> void:
+	if is_client():
+		return
+		
+	var peer_id := multiplayer.get_remote_sender_id()
 	# add checks here for admin only
-	do_cmds[cmd].call(args, peerid)
+	cmds[cmd].call(args, {
+			0 : peer_id, 
+			1 : get_plr(peer_id), 
+			2 : get_instance_by_plr(peer_id)
+		})
