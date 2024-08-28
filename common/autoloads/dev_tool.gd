@@ -105,6 +105,7 @@ var cmds : Dictionary = {
 			return
 		
 		var target_instance: InstanceResource = get_main().get_instance_resource_from_name(param[0])
+		info[2].despawn_player(info[0])
 		get_main().charge_new_instance.rpc_id(info[0], {
 			"instance_name": target_instance.instance_name,
 			"map_path": target_instance.map.resource_path
