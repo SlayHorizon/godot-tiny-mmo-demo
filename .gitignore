@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+.import
+/android/
+# MacOS
+*.DS_Store
+*.ds_store
+# Assets
+*.aseprite
