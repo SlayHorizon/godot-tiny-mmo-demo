@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dft2w65wog56o"]
+
+[ext_resource type="PackedScene" uid="uid://6bcg7fwcl6mi" path="res://common/entities/player/base_player/player.tscn" id="1_rux1i"]
+[ext_resource type="Script" path="res://client/local_player/local_player.gd" id="2_qfdgo"]
+
+[node name="Player" instance=ExtResource("1_rux1i")]
+script = ExtResource("2_qfdgo")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+animation = &"idle"
+frame_progress = 0.0
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+zoom = Vector2(3, 3)
