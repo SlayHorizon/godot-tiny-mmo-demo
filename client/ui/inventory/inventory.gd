@@ -1,5 +1,4 @@
-## WORK IN PROGRESS BY @d-Cadrius
-
+## MADE BY @d-Cadrius contributor.
 class_name Inventory
 extends Control
 

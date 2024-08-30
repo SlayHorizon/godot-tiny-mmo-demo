@@ -1,4 +1,7 @@
+class_name LocalPlayer
 extends Player
+
+signal sync_state_defined(sync_state: Dictionary)
 
 var speed: float = 75.0
 
@@ -9,15 +12,8 @@ var interact_input: bool = false
 
 var state: String = "idle"
 
-@onready var cursor: Sprite2D = $Cursor
-
 func _ready() -> void:
-	animated_sprite.play(&"idle_down")
-	# Cursor animation
-	var tween: Tween = create_tween()
-	tween.set_loops()
-	tween.tween_property(cursor, ^"position:y", 1.5, 0.4).as_relative()
-	tween.tween_property(cursor, ^"position:y", -1.5, 0.4).as_relative()
+	animated_sprite.play(&"idle")
 
 func _physics_process(_delta: float) -> void:
 	check_inputs()
@@ -25,9 +21,10 @@ func _physics_process(_delta: float) -> void:
 	update_animation()
 	define_sync_state()
 
+
 func move() -> void:
 	velocity = input_direction * speed
-	state = "walk" if velocity else "idle"
+	state = "run" if velocity else "idle"
 	move_and_slide()
 
 func check_inputs() -> void:
@@ -39,29 +36,19 @@ func check_inputs() -> void:
 	interact_input = Input.is_action_just_pressed("interact")
 
 func update_animation() -> void:
-	var sprite_direction: String = "_down"
-	match last_input_direction:
-		Vector2.RIGHT:
-			sprite_direction = "_right"
-		Vector2.LEFT:
-			sprite_direction = "_left"
-		Vector2.UP:
-			sprite_direction = "_up"
-		Vector2.DOWN:
-			sprite_direction = "_down"
-	#animated_sprite.play(state + sprite_direction)
-	animation = state + sprite_direction
+	var mouse_position := get_global_mouse_position()
+	flipped = (mouse_position.x < global_position.x)
+	animation = state
 
 func define_sync_state() -> void:
-	# Should convert to packedbytes for optimization ?
+	# Should convert sync_state to packedbytes for optimization ?
 	sync_state = {
 		"T": Time.get_unix_time_from_system(),
 		"position": get_global_position(),
-		#"AD": anim_vector, 
+		"flipped": flipped,
 		"animation": animation,
 	}
-	# Should be differently ?
-	(get_parent() as InstanceClient).fetch_player_state.rpc_id(1, sync_state)
 
 func _set_sync_state(new_state) -> void:
 	sync_state = new_state
+	sync_state_defined.emit(new_state)

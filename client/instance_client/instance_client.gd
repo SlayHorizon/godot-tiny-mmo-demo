@@ -10,6 +10,8 @@ var entity_collection: Dictionary = {}
 
 var last_state: Dictionary = {"T" = 0.0}
 
+var local_player: LocalPlayer
+
 @rpc("authority", "call_remote", "unreliable", 0)
 func fetch_instance_state(new_state: Dictionary):
 	if new_state["T"] > last_state["T"]:
@@ -20,11 +22,21 @@ func fetch_instance_state(new_state: Dictionary):
 func fetch_player_state(_sync_state: Dictionary):
 	pass
 
+@rpc("authority", "call_remote", "reliable", 1)
+func update_entity(entity_id, to_update: Dictionary) -> void:
+	var entity: Entity = entity_collection[entity_id]
+	for thing in to_update:
+		entity.set_indexed(thing, to_update[thing])
+
 @rpc("authority", "call_remote", "reliable", 0)
 func spawn_player(player_id: int, spawn_state: Dictionary) -> void:
 	var new_player: Player
-	if player_id == Client.peer_id:
+	if player_id == Client.peer_id and not local_player:
 		new_player = LOCAL_PLAYER.instantiate()
+		(new_player as LocalPlayer).sync_state_defined.connect(
+			func(sync_state: Dictionary):
+				fetch_player_state.rpc_id(1, sync_state)
+		)
 	else:
 		new_player = DUMMY_PLAYER.instantiate()
 	new_player.name = str(player_id)

@@ -11,7 +11,7 @@ func _run() -> void:
 
 ## Example of how to create a crypto key with its self signed certificate.
 ## The private key shouldn't be exported on the client machine.
-## Files generated in godot project at res://bin.
+## Files generated are stored at res://bin.
 func generate_crypto_key_and_certificate() -> void:
 	var crypto = Crypto.new()
 	var key = CryptoKey.new()

@@ -1,43 +1,34 @@
-# Godot Tiny MMO Template
+ # Godot Tiny MMO Demo
 
-This repository contains a minimalistic MMO template built using the Godot Engine 4.3.  
-The project adheres to GDScript guidelines.
+A minimalistic MMO demo built using the Godot Engine 4.3.  
+Feel free to take a look at my ![Wiki](https://github.com/SlayHorizon/godot-tiny-mmo-demo/wiki) to better understand the project.
 
-(![M.M.O.A.R.P.G. (V.000.007) Godot-Tiny-MMO-Template-0.0.3 Godot 4.3 NET+ Dungeon Gathering Online (0)(Frontpage Github Contributor)(Image showing the early state of the project)](https://github.com/user-attachments/assets/017df4d6-a6fa-465c-a9ea-d74cf1c27393)
-)
+Old screenshot showing 16 clients at the same time on multiple different instances:  
+![M.M.O.A.R.P.G. (V.000.007) Godot-Tiny-MMO-Template-0.0.3 Godot 4.3 NET+ Dungeon Gathering Online (0)(Frontpage Github Contributor)(Image showing the early state of the project)](https://github.com/user-attachments/assets/017df4d6-a6fa-465c-a9ea-d74cf1c27393)
+Login menu:  
+![login-menu-screenshot](https://github.com/user-attachments/assets/3d47c8e1-ace1-4452-83b5-a4d73584fdc4)
 
-## Project Goals / To-Do List
+## Project Goals
 
-This project aims to create a minimalist multipurpose functional MMO-style game template with the following features.  
-The list below indicates the current progress:
+The list below indicates the current progress and goals:
 
-- [X] 1.) **Client-Server connection through WebSocketMultiplayerPeer system.**
-- [ ] 2.) **Client side working on web browser system.**
-- [X] 3.) **Authentication steps before connecting system.**
-- [ ] 4.) **Login UI to authenticate system.**
-- [ ] 5.) **Player character selection log in screen (16+ characters per account) system.**
-- [ ] 6.) **Multiboxing of up to 16 characters from 1 account on 1 client / player / computer system.**
-- [X] 7.) **Synchronizing entities among the players in the same instance system.**
-- [X] 8.) **Hosting different map instances on a single server and allowing traveling between them system.**
-- [ ] 9.) **Private instance for individual players or groups system.**
-- [ ] 10.) **WASD Flare Style ARPG Combat combat system with PvE and PvP system.**
-- [ ] 11.) **Abilities / powers / spells system.**
-- [ ] 12.) **Hotbar GUI support ability / power / spell system.**
-- [ ] 13.) **Entity commands (/follow /stop /hostile /defensive /passive /heal_lowest_ally command) system.**
-- [ ] 14.) **Multiple class build starts to choose at the beginning (Adventurer/Worlder/Multiclass/Build-a-class/Default, Warrior/Knight, Wanderer/Rogue, Wizard/Mage, Warden/Cleric) system.**
-- [ ] 15.) **Experience, character progression / leveling and specialization / skilltrees / powertrees system.**
-- [ ] 16.) **Arbitrary attributes / statistics / damage types and elements system.**
-- [ ] 17.) **Arbitary entity resource (Health, Mana, Spirit etc.) system.**
-- [X] 18.) **Floating Point / Percentage % / Complex Number Support system.**
-- [ ] 19.) **Character / player customization (men and women gender selection and various appearance customization features per character) system.**
-- [ ] 20.) **Visual chararcter equipment and arbitrary character equipment slots system.**
-- [ ] 21.) **Inventory and item storage with arbitrary inventory and item storage slots system.**
-- [ ] 22.) **Colour text item quality / rarity system.**
-- [ ] 23.) **Trade, auction house, in-game mail and economy system.**
-- [ ] 24.) **Step Sounds / Inventory Item Sounds system.**
-- [ ] 25.) **Equipment sets system.**
-- [5/25] 20% Feature complete progress.)
+- [X] **Client-Server connection through WebSocketMultiplayerPeer.**
+- [ ] **Client side working on web browser.**
+- [X] **Authentication steps before connecting.**
+- [x] **Login UI to authenticate.**
+- [X] **Synchronizing entities among the players in the same instance.**
+- [X] **Hosting different map instances on a single server and allowing traveling between them.**
+- [ ] **Basic RPG class system with 3 classes to get started with: Knight, Rogue, Wizard.**
+- [ ] **Private instance for individual players or groups.**
+- [ ] **Mobs hosted and managed by the server.**
+- [ ] **Basic combat system with PvE and PvP.**
+- [ ] **Experience and leveling systems.**
+- [ ] **Entity interpolation (rubber banding).**
+- [ ] **Server clock.**
+- [ ] **Instance based chat.**
+- [ ] **Saving persistent data on the server.**
 
+And maybe more later.
 
 See the [open issues](https://github.com/SlayHorizon/godot-tiny-mmo-template/issues) for a full list of proposed features (and known issues).  
 
@@ -47,13 +38,12 @@ To get started with the project:
 1. Clone this repository.
 2. Launch it with Godot 4.3.
 3. In Debug tab, choose "Customizable Run Instance...".
-4. Enable Multiple Instances and set 3-17+.
-5. Under feature tags, be sure to have 1 "server" 2+ "client".
+4. Enable Multiple Instances and set at least 2 or more..
+5. Under feature tags, be sure to have only 1 "server" tag and at least 1 or more "client" tag.
 6. Play the project.
-Example Multiple Instances:
-![M M O A R P G (V 000 007) Godot-Tiny-MMO-Template-0 0 3 Godot 4 3 NET+ Dungeon Gathering Online (1)(Frontpage Github Contributor)](https://github.com/user-attachments/assets/5ca8d95d-c78b-4027-8c23-77d4e987b4ef)
 
-
+Example:  
+![multiple-instances-screenshot](https://github.com/user-attachments/assets/07b0b609-3712-4e3d-bbe0-f5151ddfe8a6)
 
 ## Contributing
 
@@ -65,9 +55,10 @@ If you have a suggestion that would make this better, please fork the repo and c
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Contributors
+## Contributors & Credits.
 <a href = "https://github.com/SlayHorizon/simple-sqlite/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo=SlayHorizon/godot-tiny-mmo-template"/>
+  <img src = "https://contrib.rocks/image?repo=SlayHorizon/godot-tiny-mmo-demo"/>
 </a>  
 
+Screen shots from @WithinAmnesia.  
 Also thanks to [@Anokolisa](https://anokolisa.itch.io/dungeon-crawler-pixel-art-asset-pack) for allowing us to use its assets for an open source project!

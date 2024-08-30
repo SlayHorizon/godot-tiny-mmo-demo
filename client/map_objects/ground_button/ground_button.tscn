@@ -1,35 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://bojii5hxh2lgh"]
+[gd_scene load_steps=7 format=3 uid="uid://bojii5hxh2lgh"]
 
 [ext_resource type="Script" path="res://client/map_objects/ground_button/ground_button.gd" id="1_tgw3s"]
-[ext_resource type="Texture2D" uid="uid://drqxetxdiqg42" path="res://assets/sprites/tilesets/water_dungeon/button.png" id="2_gjrth"]
+[ext_resource type="Texture2D" uid="uid://b1lsob56myiuh" path="res://assets/sprites/environment_objects/pressure_plate.png" id="2_exn2p"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v421g"]
-atlas = ExtResource("2_gjrth")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ko8j8"]
-atlas = ExtResource("2_gjrth")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf86q"]
+atlas = ExtResource("2_exn2p")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_11byr"]
-atlas = ExtResource("2_gjrth")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k88gv"]
-atlas = ExtResource("2_gjrth")
+[sub_resource type="AtlasTexture" id="AtlasTexture_882yo"]
+atlas = ExtResource("2_exn2p")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_aa61n"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v421g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ko8j8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_11byr")
+"texture": SubResource("AtlasTexture_xf86q")
 }],
 "loop": false,
 "name": &"pressed",
@@ -37,7 +23,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k88gv")
+"texture": SubResource("AtlasTexture_882yo")
 }],
 "loop": false,
 "name": &"up",
@@ -53,7 +39,7 @@ script = ExtResource("1_tgw3s")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_aa61n")
-animation = &"up"
+animation = &"pressed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_uru4r")

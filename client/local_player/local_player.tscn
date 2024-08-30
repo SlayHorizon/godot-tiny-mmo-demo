@@ -1,17 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dft2w65wog56o"]
+[gd_scene load_steps=3 format=3 uid="uid://dft2w65wog56o"]
 
 [ext_resource type="PackedScene" uid="uid://6bcg7fwcl6mi" path="res://common/entities/player/base_player/player.tscn" id="1_rux1i"]
 [ext_resource type="Script" path="res://client/local_player/local_player.gd" id="2_qfdgo"]
-[ext_resource type="Texture2D" uid="uid://bqtshftj3uh6u" path="res://assets/sprites/characters/old_knight/green knight set sprite-sheet.png" id="3_q0aib"]
 
 [node name="Player" instance=ExtResource("1_rux1i")]
 script = ExtResource("2_qfdgo")
 
-[node name="Cursor" type="Sprite2D" parent="." index="0"]
-position = Vector2(0, -13)
-texture = ExtResource("3_q0aib")
-region_enabled = true
-region_rect = Rect2(68, 41, 8, 5)
+[node name="AnimatedSprite2D" parent="." index="0"]
+frame_progress = 0.0
 
-[node name="Camera2D" type="Camera2D" parent="." index="3"]
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
 zoom = Vector2(3, 3)
