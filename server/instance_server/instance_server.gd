@@ -3,7 +3,7 @@ extends SubViewport
 
 signal player_entered_warper(player: Player, current_instance: ServerInstance, warper: Warper)
 
-const PLAYER = preload("res://common/entities/player/base_player/player.tscn")
+const PLAYER = preload("res://common/entities/player/player.tscn")
 
 var entity_collection: Dictionary = {}#[int, Entity]
 ## Current connected peers to the instance.
