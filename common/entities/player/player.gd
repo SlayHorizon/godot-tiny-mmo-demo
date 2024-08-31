@@ -30,6 +30,8 @@ var just_teleported: bool = false:
 			just_teleported = false
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var hands_offset_node: Node2D = $hands_offset
 
 func _init() -> void:
 	sync_state = {"T" = 0.0}
@@ -41,11 +43,13 @@ func _set_display_name(_new_name: String) -> void:
 
 func _set_animation(new_animation: String) -> void:
 	animation = new_animation
-	animated_sprite.play(new_animation)
+	animation_player.play("knight_" + new_animation) # sprite_frames + "_" + new_animation for later unique animations
+	#animated_sprite.play(new_animation)
 
 func _set_flip(new_flip: bool) -> void:
 	flipped = new_flip
 	animated_sprite.flip_h = flipped
+	hands_offset_node.scale = Vector2(-1 if flipped else 1, 1)
 
 func _set_sprite_frames(new_sprite_frames: String) -> void:
 	# Bad design, not scalable and optimized.
