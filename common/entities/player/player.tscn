@@ -36,7 +36,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../hands_offset/hands_center_point:position")
+tracks/2/path = NodePath("../hands_offset/hands_rotation_point:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -69,7 +69,6 @@ _data = {
 size = Vector2(14, 6)
 
 [node name="Player" type="CharacterBody2D"]
-y_sort_enabled = true
 texture_filter = 1
 collision_mask = 6
 script = ExtResource("1_gnfj5")
@@ -82,10 +81,9 @@ libraries = {
 autoplay = "knight_idle"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -2)
 sprite_frames = ExtResource("2_lfo32")
 animation = &"idle"
-offset = Vector2(0, -30)
+offset = Vector2(0, -32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
@@ -93,10 +91,10 @@ shape = SubResource("RectangleShape2D_3w1m3")
 
 [node name="hands_offset" type="Node2D" parent="."]
 
-[node name="hands_center_point" type="Node2D" parent="hands_offset"]
+[node name="hands_rotation_point" type="Node2D" parent="hands_offset"]
 position = Vector2(0, -10)
 
-[node name="Hand" type="Sprite2D" parent="hands_offset/hands_center_point"]
+[node name="Hand" type="Sprite2D" parent="hands_offset/hands_rotation_point"]
 position = Vector2(13, 2)
 texture = ExtResource("4_7te6j")
 region_enabled = true
@@ -105,7 +103,7 @@ script = ExtResource("4_83qu4")
 side = 1
 status = 1
 
-[node name="Hand2" type="Sprite2D" parent="hands_offset/hands_center_point"]
+[node name="Hand2" type="Sprite2D" parent="hands_offset/hands_rotation_point"]
 position = Vector2(-9, 2)
 texture = ExtResource("4_7te6j")
 region_enabled = true

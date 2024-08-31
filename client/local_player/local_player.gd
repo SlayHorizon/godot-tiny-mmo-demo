@@ -39,6 +39,16 @@ func update_animation() -> void:
 	var mouse_position := get_global_mouse_position()
 	flipped = (mouse_position.x < global_position.x)
 	animation = state
+	
+	if idle_hands:
+		return
+	
+	# Hands look at mouse & flips code
+	var hands_rot_pos = hands_rotation_point.global_position
+	var flips := -1 if flipped else 1
+	var look_at_mouse := atan2(mouse_position.y - hands_rot_pos.y, mouse_position.x - hands_rot_pos.x) * flips
+	hands_rotation_point.scale = Vector2.ONE * flips
+	hands_rotation_point.rotation = look_at_mouse
 
 func define_sync_state() -> void:
 	# Should convert sync_state to packedbytes for optimization ?

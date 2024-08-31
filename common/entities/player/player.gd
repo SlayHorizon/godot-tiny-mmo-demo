@@ -29,9 +29,12 @@ var just_teleported: bool = false:
 			await get_tree().create_timer(0.5).timeout
 			just_teleported = false
 
+var idle_hands: bool = false # stops hands from looking at the cursor
+
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var hands_offset_node: Node2D = $hands_offset
+@onready var hands_rotation_point: Node2D = $hands_offset/hands_rotation_point
 
 func _init() -> void:
 	sync_state = {"T" = 0.0}
