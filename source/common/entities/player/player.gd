@@ -51,11 +51,11 @@ func _set_sprite_frames(new_sprite_frames: String) -> void:
 	# Bad design, not scalable and optimized.
 	match new_sprite_frames:
 		"knight":
-			animated_sprite.sprite_frames = load("res://common/resources/builtin/sprite_frames/knight.tres")
+			animated_sprite.sprite_frames = load("res://source/common/resources/builtin/sprite_frames/knight.tres")
 		"rogue":
-			animated_sprite.sprite_frames = load("res://common/resources/builtin/sprite_frames/rogue.tres")
+			animated_sprite.sprite_frames = load("res://source/common/resources/builtin/sprite_frames/rogue.tres")
 		"wizard":
-			animated_sprite.sprite_frames = load("res://common/resources/builtin/sprite_frames/wizard.tres")
+			animated_sprite.sprite_frames = load("res://source/common/resources/builtin/sprite_frames/wizard.tres")
 
 func _set_sync_state(new_state) -> void:
 	sync_state = new_state
