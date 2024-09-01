@@ -3,7 +3,7 @@ extends Node
 
 static var dev_menu_instance : CanvasLayer
 
-@onready var dev_menu : PackedScene = preload("res://client/ui/hud/dev_hud.tscn")
+@onready var dev_menu : PackedScene = preload("res://source/client/ui/hud/dev_hud.tscn")
 
 var place_holder_message : Label
 var msg_container : VBoxContainer
