@@ -11,16 +11,16 @@ config_version=5
 [application]
 
 config/name="Godot Tiny MMO"
-run/main_scene="res://common/main/main.tscn"
+run/main_scene="res://source/common/main/main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-ClientEvents="*res://common/autoloads/client_events.gd"
-Client="*res://common/autoloads/client.gd"
-Server="*res://common/autoloads/server.gd"
-DevTool="*res://common/autoloads/dev_tool.gd"
+ClientEvents="*res://source/common/autoloads/client_events.gd"
+Client="*res://source/common/autoloads/client.gd"
+Server="*res://source/common/autoloads/server.gd"
+DevTool="*res://source/common/autoloads/dev_tool.gd"
 
 [debug]
 
@@ -38,9 +38,10 @@ window/stretch/mode="canvas_items"
 
 folder_colors={
 "res://assets/": "green",
-"res://client/": "blue",
-"res://common/": "yellow",
-"res://server/": "pink"
+"res://source/": "red",
+"res://source/client/": "blue",
+"res://source/common/": "yellow",
+"res://source/server/": "orange"
 }
 
 [input]
@@ -82,7 +83,7 @@ action={
 
 [network]
 
-tls/certificate_bundle_override="res://common/server_certificate.crt"
+tls/certificate_bundle_override="res://source/common/server_certificate.crt"
 
 [rendering]
 
