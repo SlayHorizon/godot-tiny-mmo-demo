@@ -43,12 +43,6 @@ func _on_player_entered_warper(player: Player, current_instance: ServerInstance,
 		"target_id": warper.target_id
 	}
 
-func build_instance_collection() -> void:
-	for file_path in get_all_file_paths("res://common/resources/custom/instance_resources/instance_collection/"):
-		instance_collection.append(ResourceLoader.load(file_path))
-	for instance_resource: InstanceResource in instance_collection:
-		if instance_resource.load_at_startup:
-			charge_instance(instance_resource)
 
 func charge_instance(instance_resource: InstanceResource) -> void:
 	var new_instance := ServerInstance.new()
@@ -70,12 +64,21 @@ func get_instance_resource_from_name(instance_name) -> InstanceResource:
 			return instance_resource
 	return null
 
+func build_instance_collection() -> void:
+	for file_path in get_all_file_paths("res://common/resources/custom/instance_resources/instance_collection/"):
+		instance_collection.append(ResourceLoader.load(file_path))
+	for instance_resource: InstanceResource in instance_collection:
+		if instance_resource.load_at_startup:
+			charge_instance(instance_resource)
+
 func get_all_file_paths(path: String) -> Array[String]:  
 	var file_paths: Array[String] = []  
 	var dir := DirAccess.open(path)  
 	dir.list_dir_begin()  
 	var file_name: String = dir.get_next()  
-	while file_name != "":  
+	while file_name != "":
+		if '.tres.remap' in file_name:
+			file_name = file_name.trim_suffix('.remap')
 		var file_path = path + "/" + file_name  
 		if dir.current_is_dir():  
 			file_paths += get_all_file_paths(file_path)  
