@@ -16,6 +16,9 @@ var flipped: bool = false:
 
 var sprite_frames: String = "knight":
 	set = _set_sprite_frames
+	
+var hands_rotation: float = 0 :
+	set = _set_hands_rotation
 
 var is_in_pvp_zone: bool = false
 var just_teleported: bool = false:
@@ -41,6 +44,10 @@ func _init() -> void:
 	group = Group.PLAYER
 
 
+func _set_hands_rotation(_new_rot: float) -> void:
+	hands_rotation = _new_rot
+	hands_rotation_point.rotation = hands_rotation
+
 func _set_display_name(_new_name: String) -> void:
 	pass
 
@@ -52,7 +59,10 @@ func _set_animation(new_animation: String) -> void:
 func _set_flip(new_flip: bool) -> void:
 	flipped = new_flip
 	animated_sprite.flip_h = flipped
-	hands_offset_node.scale = Vector2(-1 if flipped else 1, 1)
+	
+	var flips : int = -1 if flipped else 1
+	hands_offset_node.scale = Vector2(flips, 1)
+	hands_rotation_point.scale = Vector2.ONE * flips
 
 func _set_sprite_frames(new_sprite_frames: String) -> void:
 	# Bad design, not scalable and optimized.
