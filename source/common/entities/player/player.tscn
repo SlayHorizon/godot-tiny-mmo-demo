@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://6bcg7fwcl6mi"]
+[gd_scene load_steps=11 format=3 uid="uid://6bcg7fwcl6mi"]
 
-[ext_resource type="Script" path="res://common/entities/player/player.gd" id="1_gnfj5"]
-[ext_resource type="Animation" uid="uid://dlancjk3bemce" path="res://common/resources/builtin/animations/knight/knight_idle.res" id="2_dywqi"]
-[ext_resource type="SpriteFrames" uid="uid://bqcsne8jhbmi8" path="res://common/resources/builtin/sprite_frames/knight.tres" id="2_lfo32"]
-[ext_resource type="Animation" uid="uid://bf2g1qff12kc0" path="res://common/resources/builtin/animations/knight/knight_run.res" id="3_s3eq8"]
-[ext_resource type="Texture2D" uid="uid://clc768ctxxvjg" path="res://assets/sprites/items/weapons/hands/human_hands.png" id="4_7te6j"]
-[ext_resource type="Script" path="res://common/entities/hand/hands.gd" id="4_83qu4"]
+[ext_resource type="Script" path="res://source/common/entities/player/player.gd" id="1_od6m8"]
+[ext_resource type="Animation" uid="uid://dlancjk3bemce" path="res://source/common/resources/builtin/animations/knight/knight_idle.res" id="2_gfbdc"]
+[ext_resource type="Animation" uid="uid://bf2g1qff12kc0" path="res://source/common/resources/builtin/animations/knight/knight_run.res" id="3_u1msd"]
+[ext_resource type="SpriteFrames" uid="uid://bqcsne8jhbmi8" path="res://source/common/resources/builtin/sprite_frames/knight.tres" id="4_32ddn"]
+[ext_resource type="Texture2D" uid="uid://clc768ctxxvjg" path="res://assets/sprites/items/weapons/hands/human_hands.png" id="5_cwsfm"]
+[ext_resource type="Script" path="res://source/common/entities/player/weapon.gd" id="6_k8imc"]
+[ext_resource type="Script" path="res://source/common/entities/hand/hands.gd" id="6_ygh6r"]
 
 [sub_resource type="Animation" id="Animation_2jvv1"]
 length = 0.001
@@ -36,22 +37,10 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../hands_offset/hands_rotation_point:position")
+tracks/2/path = NodePath("../hands_offset:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -10)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../hands_offset:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
@@ -61,8 +50,8 @@ tracks/3/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rnm42"]
 _data = {
 "RESET": SubResource("Animation_2jvv1"),
-"knight_idle": ExtResource("2_dywqi"),
-"knight_run": ExtResource("3_s3eq8")
+"knight_idle": ExtResource("2_gfbdc"),
+"knight_run": ExtResource("3_u1msd")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3w1m3"]
@@ -71,7 +60,8 @@ size = Vector2(14, 6)
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 collision_mask = 6
-script = ExtResource("1_gnfj5")
+motion_mode = 1
+script = ExtResource("1_od6m8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite2D")
@@ -81,7 +71,7 @@ libraries = {
 autoplay = "knight_idle"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("2_lfo32")
+sprite_frames = ExtResource("4_32ddn")
 animation = &"idle"
 offset = Vector2(0, -32)
 
@@ -96,16 +86,19 @@ position = Vector2(0, -10)
 
 [node name="Hand" type="Sprite2D" parent="hands_offset/hands_rotation_point"]
 position = Vector2(13, 2)
-texture = ExtResource("4_7te6j")
+texture = ExtResource("5_cwsfm")
 region_enabled = true
 region_rect = Rect2(16, 16, 16, 16)
-script = ExtResource("4_83qu4")
+script = ExtResource("6_ygh6r")
 side = 1
 status = 1
 
 [node name="Hand2" type="Sprite2D" parent="hands_offset/hands_rotation_point"]
 position = Vector2(-9, 2)
-texture = ExtResource("4_7te6j")
+texture = ExtResource("5_cwsfm")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
-script = ExtResource("4_83qu4")
+script = ExtResource("6_ygh6r")
+
+[node name="Weapon" type="Node2D" parent="hands_offset/hands_rotation_point"]
+script = ExtResource("6_k8imc")

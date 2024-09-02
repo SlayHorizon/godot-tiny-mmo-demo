@@ -1,62 +1,62 @@
 [gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://bqcsne8jhbmi8"]
 
-[ext_resource type="Texture2D" uid="uid://bye66inpdvpdy" path="res://assets/sprites/characters/knight/knight_idle.png" id="1_2cp3g"]
-[ext_resource type="Texture2D" uid="uid://b3qbjl2cjhlix" path="res://assets/sprites/characters/knight/knight_run.png" id="2_byr0s"]
+[ext_resource type="Texture2D" uid="uid://bye66inpdvpdy" path="res://assets/sprites/characters/knight/knight_idle.png" id="1_os5bn"]
+[ext_resource type="Texture2D" uid="uid://b3qbjl2cjhlix" path="res://assets/sprites/characters/knight/knight_run.png" id="2_pj4vo"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1q2s0"]
-atlas = ExtResource("1_2cp3g")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wx3fd"]
+atlas = ExtResource("1_os5bn")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h3ekv"]
-atlas = ExtResource("1_2cp3g")
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lj7n"]
+atlas = ExtResource("1_os5bn")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hftmc"]
-atlas = ExtResource("1_2cp3g")
+[sub_resource type="AtlasTexture" id="AtlasTexture_5npdj"]
+atlas = ExtResource("1_os5bn")
 region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tpnx0"]
-atlas = ExtResource("1_2cp3g")
+[sub_resource type="AtlasTexture" id="AtlasTexture_38b12"]
+atlas = ExtResource("1_os5bn")
 region = Rect2(192, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c6xot"]
-atlas = ExtResource("2_byr0s")
+[sub_resource type="AtlasTexture" id="AtlasTexture_yesme"]
+atlas = ExtResource("2_pj4vo")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_54y05"]
-atlas = ExtResource("2_byr0s")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1s7bq"]
+atlas = ExtResource("2_pj4vo")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_eteuy"]
-atlas = ExtResource("2_byr0s")
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1p0b"]
+atlas = ExtResource("2_pj4vo")
 region = Rect2(128, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ie0t4"]
-atlas = ExtResource("2_byr0s")
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yfrf"]
+atlas = ExtResource("2_pj4vo")
 region = Rect2(192, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xqhu2"]
-atlas = ExtResource("2_byr0s")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ts2pg"]
+atlas = ExtResource("2_pj4vo")
 region = Rect2(256, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nfx3i"]
-atlas = ExtResource("2_byr0s")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ev4nu"]
+atlas = ExtResource("2_pj4vo")
 region = Rect2(320, 0, 64, 64)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1q2s0")
+"texture": SubResource("AtlasTexture_wx3fd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h3ekv")
+"texture": SubResource("AtlasTexture_8lj7n")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hftmc")
+"texture": SubResource("AtlasTexture_5npdj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tpnx0")
+"texture": SubResource("AtlasTexture_38b12")
 }],
 "loop": true,
 "name": &"idle",
@@ -64,22 +64,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_c6xot")
+"texture": SubResource("AtlasTexture_yesme")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_54y05")
+"texture": SubResource("AtlasTexture_1s7bq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_eteuy")
+"texture": SubResource("AtlasTexture_d1p0b")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ie0t4")
+"texture": SubResource("AtlasTexture_6yfrf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xqhu2")
+"texture": SubResource("AtlasTexture_ts2pg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nfx3i")
+"texture": SubResource("AtlasTexture_ev4nu")
 }],
 "loop": true,
 "name": &"run",

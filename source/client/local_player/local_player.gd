@@ -12,9 +12,6 @@ var interact_input: bool = false
 
 var state: String = "idle"
 
-func _ready() -> void:
-	animated_sprite.play(&"idle")
-
 func _physics_process(_delta: float) -> void:
 	check_inputs()
 	move()
