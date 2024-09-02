@@ -62,7 +62,6 @@ func _set_flip(new_flip: bool) -> void:
 	
 	var flips : int = -1 if flipped else 1
 	hands_offset_node.scale = Vector2(flips, 1)
-	hands_rotation_point.scale = Vector2.ONE * flips
 
 func _set_sprite_frames(new_sprite_frames: String) -> void:
 	# Bad design, not scalable and optimized.

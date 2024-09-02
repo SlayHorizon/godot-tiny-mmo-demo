@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://b4swfwehh27ya"]
+
+[ext_resource type="Script" path="res://source/common/entities/player/weapons/weapon.gd" id="1_v01kr"]
+[ext_resource type="SpriteFrames" uid="uid://bqcsne8jhbmi8" path="res://source/common/resources/builtin/sprite_frames/knight.tres" id="2_g1n3m"]
+[ext_resource type="Texture2D" uid="uid://clc768ctxxvjg" path="res://assets/sprites/items/weapons/hands/human_hands.png" id="3_4omm2"]
+[ext_resource type="Script" path="res://source/common/entities/hand/hands.gd" id="4_obtfu"]
+[ext_resource type="Texture2D" uid="uid://bogvbnwhxp5ej" path="res://assets/sprites/items/weapons/wood/wood.png" id="5_fu0q4"]
+
+[sub_resource type="Animation" id="Animation_wttlv"]
+resource_name = "idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qsbl5"]
+_data = {
+"idle": SubResource("Animation_wttlv")
+}
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("left_hand", "right_hand")]
+script = ExtResource("1_v01kr")
+left_hand = NodePath("left_hand")
+right_hand = NodePath("right_hand")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../right_hand")
+libraries = {
+"": SubResource("AnimationLibrary_qsbl5")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, 10)
+sprite_frames = ExtResource("2_g1n3m")
+animation = &"idle"
+offset = Vector2(0, -32)
+
+[node name="right_hand" type="Sprite2D" parent="."]
+position = Vector2(13, 0)
+texture = ExtResource("3_4omm2")
+region_enabled = true
+region_rect = Rect2(16, 16, 16, 16)
+script = ExtResource("4_obtfu")
+side = 1
+status = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="right_hand"]
+show_behind_parent = true
+position = Vector2(1, 0)
+texture = ExtResource("5_fu0q4")
+offset = Vector2(0, -15)
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 48)
+
+[node name="left_hand" type="Sprite2D" parent="."]
+position = Vector2(-10, 0)
+texture = ExtResource("3_4omm2")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+script = ExtResource("4_obtfu")

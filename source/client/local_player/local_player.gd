@@ -4,6 +4,7 @@ extends Player
 signal sync_state_defined(sync_state: Dictionary)
 
 var speed: float = 75.0
+var lookat_speed: float = 10.0
 
 var input_direction: Vector2 = Vector2.ZERO
 var last_input_direction: Vector2 = Vector2.ZERO
@@ -41,10 +42,17 @@ func update_animation() -> void:
 		return
 	
 	# Hands look at mouse & flips code
-	var hands_rot_pos = hands_rotation_point.global_position
-	var flips := -1 if flipped else 1
-	var look_at_mouse := atan2(mouse_position.y - hands_rot_pos.y, mouse_position.x - hands_rot_pos.x) * flips
-	hands_rotation = look_at_mouse
+	if Input.is_action_pressed("action"):
+		var hands_rot_pos = hands_rotation_point.global_position
+		var flips := -1 if flipped else 1
+		var look_at_mouse := atan2(
+			(mouse_position.y - hands_rot_pos.y), 
+			(mouse_position.x - hands_rot_pos.x) * flips
+			)
+		hands_rotation = lerp_angle(hands_rotation, look_at_mouse, get_physics_process_delta_time() * lookat_speed)#look_at_mouse
+		return
+	
+	hands_rotation = lerp_angle(hands_rotation, 0, get_physics_process_delta_time() * lookat_speed)
 
 func define_sync_state() -> void:
 	# Should convert sync_state to packedbytes for optimization ?
