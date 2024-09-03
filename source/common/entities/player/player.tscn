@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://source/common/entities/player/player.gd" id="1_od6m8"]
 [ext_resource type="Animation" uid="uid://dlancjk3bemce" path="res://source/common/resources/builtin/animations/knight/knight_idle.res" id="2_gfbdc"]
 [ext_resource type="Animation" uid="uid://bf2g1qff12kc0" path="res://source/common/resources/builtin/animations/knight/knight_run.res" id="3_u1msd"]
-[ext_resource type="SpriteFrames" uid="uid://by0ioxev3i7tq" path="res://source/common/resources/builtin/sprite_frames/knight.tres" id="4_32ddn"]
+[ext_resource type="SpriteFrames" uid="uid://cou6ydsbgx731" path="res://source/common/resources/builtin/sprite_frames/knight.tres" id="4_uq2g6"]
 [ext_resource type="PackedScene" uid="uid://b4swfwehh27ya" path="res://source/common/entities/player/weapons/test.tscn" id="5_8ariw"]
 
 [sub_resource type="Animation" id="Animation_2jvv1"]
@@ -69,7 +69,7 @@ libraries = {
 autoplay = "knight_idle"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("4_32ddn")
+sprite_frames = ExtResource("4_uq2g6")
 animation = &"idle"
 offset = Vector2(0, -32)
 
