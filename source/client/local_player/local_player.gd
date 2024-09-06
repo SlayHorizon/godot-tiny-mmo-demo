@@ -19,7 +19,6 @@ func _physics_process(_delta: float) -> void:
 	update_animation()
 	define_sync_state()
 
-
 func move() -> void:
 	velocity = input_direction * speed
 	state = "run" if velocity else "idle"
@@ -35,7 +34,7 @@ func check_inputs() -> void:
 
 func update_animation() -> void:
 	var mouse_position := get_global_mouse_position()
-	flipped = (mouse_position.x < global_position.x)
+	flipped = (Mouse.mouse_position.x < global_position.x)
 	animation = state
 	
 	if idle_hands:
@@ -46,8 +45,8 @@ func update_animation() -> void:
 		var hands_rot_pos = hands_rotation_point.global_position
 		var flips := -1 if flipped else 1
 		var look_at_mouse := atan2(
-			(mouse_position.y - hands_rot_pos.y), 
-			(mouse_position.x - hands_rot_pos.x) * flips
+			(Mouse.mouse_position.y - hands_rot_pos.y), 
+			(Mouse.mouse_position.x - hands_rot_pos.x) * flips
 			)
 		hands_rotation = lerp_angle(hands_rotation, look_at_mouse, get_physics_process_delta_time() * lookat_speed)#look_at_mouse
 		return
