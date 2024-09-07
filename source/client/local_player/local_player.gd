@@ -33,8 +33,7 @@ func check_inputs() -> void:
 	interact_input = Input.is_action_just_pressed("interact")
 
 func update_animation() -> void:
-	var mouse_position := get_global_mouse_position()
-	flipped = (Mouse.mouse_position.x < global_position.x)
+	flipped = (Mouse.position.x < global_position.x)
 	animation = state
 	
 	if idle_hands:
@@ -45,8 +44,8 @@ func update_animation() -> void:
 		var hands_rot_pos = hands_rotation_point.global_position
 		var flips := -1 if flipped else 1
 		var look_at_mouse := atan2(
-			(Mouse.mouse_position.y - hands_rot_pos.y), 
-			(Mouse.mouse_position.x - hands_rot_pos.x) * flips
+			(Mouse.position.y - hands_rot_pos.y), 
+			(Mouse.position.x - hands_rot_pos.x) * flips
 			)
 		hands_rotation = lerp_angle(hands_rotation, look_at_mouse, get_physics_process_delta_time() * lookat_speed)#look_at_mouse
 		return
